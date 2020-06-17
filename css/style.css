@@ -111,6 +111,11 @@ nav img {
     position: relative;
     cursor: pointer;
 }
+#contato{
+    color: white;
+    font-family: 'contentFont';
+    text-align: center;
+}
 
 @media screen and (max-width: 501px){
     .toggle{
