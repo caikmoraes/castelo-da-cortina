@@ -142,9 +142,12 @@ nav img {
         color: var(--navColor);
         border-radius: 50em;
     }
+    .item.button:hover{
+        background-color: var(--decorationColor);
+    }
     
 }
-/* Tablets grandes e Notebooks */
+/* Tablets grandes e Notebooks +*/
 @media screen and (min-width: 960px) {
     nav {
         padding: 0 15px;
@@ -170,6 +173,7 @@ nav img {
     .menu li:not(.logo){
         padding: 15px 5px;
     }
+    .item.button:hover{
+        background-color: var(--decorationColor);
+    }
 }
-/* Desktops */
-@media screen and (min-width: 1200px) {}
