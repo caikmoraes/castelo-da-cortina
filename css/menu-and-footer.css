@@ -39,6 +39,7 @@ h1, h2, h3 {
     src: url(../fonts/Roboto/Roboto-Regular.ttf);
 }
 /* Mobile */
+/* **********CSS MENU********** */
 nav {
     background-color: var(--navColor);
     border-bottom: 1px solid #666666;
@@ -111,11 +112,13 @@ nav img {
     position: relative;
     cursor: pointer;
 }
-#contato{
+/* **********CSS FOOTER********** */
+footer {
+    background-color: var(--navColor);
+    padding: 30px;
     color: white;
-    font-family: 'contentFont';
-    text-align: center;
 }
+
 
 @media screen and (max-width: 501px){
     .toggle{
