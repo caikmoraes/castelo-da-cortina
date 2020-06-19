@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,23 +12,33 @@
     <script src="../javascript/script.js"></script>
     <title>Castelo da Cortina</title>
 </head>
+
 <body>
     <nav>
         <ul class="menu">
-            <li class="logo"><article id="artLogo"><a href="../index.html"><img src="../img/logo-peq.png" alt="Logo empresa"><h3>Cortinas e Persianas</h3></a></li>
-            <li class="item"><a href="#">Link 1</a></li>
-            <li class="item"><a href="#">Link 2</a></li>
-            <li class="item"><a href="#">Link 3</a></li>
-            <li class="item"><a href="#">Link 4</a></li>
-            <li class="item button"><a href="#">Contato</a></li>
-            <li class="toggle"><label class="bars">&#9776;</label></li>
+            <li class="logo">
+                <article id="artLogo">
+                    <a href="../index.html"><img src="../img/logo-peq.png" alt="Logo empresa">
+                        <h3>Cortinas e Persianas</h3>
+                    </a>
+            </li>
+            <li class="item"><a href="cortinas.html">Cortinas</a></li>
+            <li class="item"><a href="persianas.html">Persianas</a></li>
+            <li class="item"><a href="toldos.html">Toldos</a></li>
+            <li class="item button"><a href="contato.html">Contato</a></li>
+            <li class="toggle">
+                <label class="bars" id="open-menu" onclick="openMenu()">&#9776;</label>
+                <label class="bars" id="exit-menu" onclick="exitMenu()">&#88;</label>
+            </li>
         </ul>
     </nav>
-    <main>
-        <section>
+    <div class="separator-menu"></div>
+    <section class="sect-content">
+        <article class="art-title">
             <h1>Contato</h1>
-        </section>
-    </main>
+            <div class="underline-titles"></div>
+        </article>
+    </section>
     <footer>
         <article>
             <p>&copy; 2020 - Castelo da Cortina.</p>
@@ -35,4 +46,5 @@
         </article>
     </footer>
 </body>
+
 </html>
