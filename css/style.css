@@ -6,7 +6,8 @@
     --backgroundColor2: #E7E7E7;
     --navColor: #2B1A1C;
     --hoverColor: #0E131F;
-    --decorationColor: rgb(211, 160, 31);
+    --decorationColor: #C76275;
+    --buttonColor: #B6142B;
 }
 
 
@@ -27,6 +28,10 @@ a {
     list-style: none;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 
 /* Estilos Básicos */
 
@@ -37,7 +42,13 @@ body {
 }
 
 h1,
-h2,
+h2 {
+    font-family: 'titleFont';
+    font-size: 40pt;
+    font-weight: 400;
+    line-height: normal;
+}
+
 h3 {
     font-family: 'titleFont';
     line-height: normal;
@@ -68,6 +79,8 @@ nav {
     background-color: var(--navColor);
     border-bottom: 1px solid #666666;
     width: 100%;
+    position: fixed;
+    z-index: 1;
 }
 
 #artLogo a {
@@ -151,6 +164,7 @@ nav img {
 
 #exit-menu {
     display: none;
+    padding: 0 5px;
 }
 
 .bars {
@@ -180,14 +194,24 @@ footer>article {
 
 /* **********PAGE CONTENT********** */
 
+.separator-menu {
+    height: 100px;
+}
+
+#sect_carousel {
+    position: relative;
+    z-index: 0;
+}
+
 #sect_carousel #carouselCortinas img {
-    max-height: 80vh;
+    max-height: 84vh;
 }
 
 .sect-content {
-    padding: 30px;
+    padding: 40px;
     display: grid;
     grid-template-rows: 2;
+    grid-template-columns: 1fr;
 }
 
 .underline-titles {
@@ -206,8 +230,9 @@ footer>article {
 }
 
 .sect-content article h3 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
+    padding: 0 15px;
 }
 
 .art-title {
@@ -215,13 +240,10 @@ footer>article {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-}
-
-.art-title {
     grid-row: 1;
 }
 
-#whoWeAre {
+#whoWeAre #whoWeAre-content {
     grid-row: 2;
 }
 
@@ -267,8 +289,7 @@ footer>article {
         width: 100px;
         order: 1;
         display: block;
-        border: 2px solid var(--decorationColor);
-        background-color: #f5a81a;
+        background-color: var(--buttonColor);
         color: var(--navColor);
         border-radius: 50em;
     }
