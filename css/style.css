@@ -4,8 +4,8 @@
     --textMenuColor: #ffffff;
     --backgroundColor1: #d1d1d1;
     --backgroundColor2: #E7E7E7;
-    --navColor: #2B1A1C;
-    --hoverColor: #0E131F;
+    --navColor: #4B2514;
+    --footerColor: #2B1A1C;
     --decorationColor: #C76275;
     --buttonColor: #B6142B;
 }
@@ -190,7 +190,7 @@ nav img {
 /* **********CSS FOOTER********** */
 
 footer {
-    background-color: var(--navColor);
+    background-color: var(--footerColor);
     padding: 30px;
     color: white;
     display: grid;
@@ -208,10 +208,6 @@ footer>article p {
 
 
 /* **********PAGE CONTENT********** */
-
-.separator-menu {
-    height: 100px;
-}
 
 #sect_carousel,
 .sect-content {
@@ -233,6 +229,7 @@ footer>article p {
 .underline-titles {
     width: 80px;
     border: 2px solid #B6142B;
+    margin-top: -10px;
     margin-bottom: 30px;
     text-align: left;
 }
