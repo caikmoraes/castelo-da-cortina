@@ -233,6 +233,27 @@ footer>article {
 #lines p {
     padding: 10px 15px;
 }
+/* **********PAGINA DE CONTATOS********** */
+#faleConosco{
+    grid-row: 1;
+}
+
+#foundUs{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#contacts {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#contacts p{
+    padding: 10px 15px;
+}
+
+
 
 
 /* **********RESPONSIVES ADJUSTS********** */
@@ -284,6 +305,16 @@ footer>article {
         flex-direction: column;
         justify-content: center;
     }
+
+    #contacts {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    #contacts .art-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 
@@ -327,5 +358,13 @@ footer>article {
     #lines #toldos {
         grid-row: 2;
         grid-column: 2/4;
+    }
+
+    #contacts {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    #contacts .art-title {
+        grid-row: 1/3;
     }
 }
