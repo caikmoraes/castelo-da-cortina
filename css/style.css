@@ -4,10 +4,10 @@
     --textMenuColor: #ffffff;
     --backgroundColor1: #d1d1d1;
     --backgroundColor2: #E7E7E7;
-    --navColor: #4B2514;
+    --navColor: #2a1c15;
     --footerColor: #2B1A1C;
-    --decorationColor: #C76275;
-    --buttonColor: #B6142B;
+    --decorationColor: #873A17;
+    --buttonHoverColor: #B6142B;
 }
 
 
@@ -56,16 +56,24 @@ h3 {
     padding: 0;
 }
 
+.link-page-buttons {
+    padding-bottom: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .page-buttons {
+    grid-column: 2;
     color: white;
     text-decoration: none;
-    width: 100px;
+    width: 150px;
     height: 40px;
     font-size: 14pt;
     display: block;
-    background-color: var(--buttonColor);
+    background-color: var(--buttonHoverColor);
     border-radius: 50em;
-    margin: 15px;
+    border: none;
+    text-align: center;
 }
 
 
@@ -124,6 +132,7 @@ nav img {
 .item a {
     width: 100%;
     color: white;
+    border-radius: 5px;
 }
 
 .item.button {
@@ -153,7 +162,7 @@ nav img {
 
 .menu .item a:hover {
     background-color: var(--decorationColor);
-    color: var(--navColor);
+    color: var(--textMenuColor);
 }
 
 .menu {
@@ -228,7 +237,7 @@ footer>article p {
 
 .underline-titles {
     width: 80px;
-    border: 2px solid #B6142B;
+    border: 2px solid var(--buttonHoverColor);
     margin-top: -10px;
     margin-bottom: 30px;
     text-align: left;
@@ -274,7 +283,7 @@ footer>article p {
     font-size: 20pt;
     padding: 10px 10px;
     margin: 10px 0;
-    background-color: var(--buttonColor);
+    background-color: var(--buttonHoverColor);
     border-radius: 100%;
 }
 
@@ -358,11 +367,15 @@ footer>article p {
         width: 100px;
         order: 1;
         display: block;
-        background-color: var(--buttonColor);
+        background-color: var(--decorationColor);
         border-radius: 50em;
+        border: none;
     }
     .item.button:hover {
-        background-color: var(--decorationColor);
+        background-color: var(--buttonHoverColor);
+    }
+    .item.button a:hover {
+        background-color: var(--buttonHoverColor);
     }
     #lines {
         grid-template-columns: repeat(2, 1fr);
@@ -403,9 +416,6 @@ footer>article p {
     .menu li:not(.logo) {
         padding: 15px 5px;
     }
-    .item.button:hover {
-        background-color: var(--decorationColor);
-    }
     #lines {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -416,5 +426,11 @@ footer>article p {
     #lines #toldos {
         grid-row: 2;
         grid-column: 2/4;
+    }
+    .link-page-buttons {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .page-buttons {
+        grid-column: 3;
     }
 }
