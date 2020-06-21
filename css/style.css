@@ -19,6 +19,8 @@
     text-decoration: none;
     overflow-x: hidden;
     box-sizing: border-box;
+    /*botao de voltar ao topo */
+    scroll-behavior: smooth;
 }
 
 ul,
@@ -433,4 +435,16 @@ footer>article p {
     .page-buttons {
         grid-column: 3;
     }
+}
+#btnTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    color: var(--textMenuColor);
+    background: var(--buttonHoverColor);
+    border: none;
+    border-radius: 50vh;
+    display:none;
 }
