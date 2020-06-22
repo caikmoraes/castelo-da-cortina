@@ -104,7 +104,7 @@ nav {
     grid-row: 1;
 }
 
-#artLogo a {
+.artLogo a {
     display: flex;
     align-items: center;
     padding: 10px 5px;
@@ -114,11 +114,11 @@ nav {
     width: fit-content;
 }
 
-#artLogo a:hover {
+.artLogo a:hover {
     text-decoration: none;
 }
 
-#artLogo>h3 {
+.artLogo>h3 {
     width: 280px;
     text-align: center;
 }
@@ -372,12 +372,12 @@ footer>article p {
         width: 100%;
         text-align: center;
     }
-    #artLogo a {
+    .artLogo a {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
-    #artLogo a h3 {
+    .artLogo a h3 {
         text-align: center;
     }
 }
