@@ -20,19 +20,20 @@ function exitMenu() {
 }
 
 //botao de voltar ao topo
-window.onscroll = function(){
+window.onscroll = function() {
     scroll();
 }
-function scroll(){
-    var btn =document.getElementById("btnTop");
-    if(document.documentElement.scrollTop > 50){
-        btn.style.display="block"
-    }
-    else{
-        btn.style.display="none"
+
+function scroll() {
+    let btn = document.getElementById("btnTop");
+    btn.style.outline = 'none'
+    if (document.documentElement.scrollTop > 50) {
+        btn.style.display = "block"
+    } else {
+        btn.style.display = "none"
     }
 }
 
-function voltarTopo(){
-    document.documentElement.scrollTop=0;
+function voltarTopo() {
+    document.documentElement.scrollTop = 0;
 }
