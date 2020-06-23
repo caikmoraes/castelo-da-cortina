@@ -220,6 +220,9 @@ footer>article p {
 
 /* **********PAGE CONTENT********** */
 
+
+/* Index css */
+
 #sect_carousel,
 .sect-content {
     position: relative;
@@ -271,6 +274,14 @@ footer>article p {
     grid-row: 2;
 }
 
+.effectPhrase {
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+    font-family: 'titleFont';
+    font-size: 20pt;
+}
+
 #lines {
     display: grid;
     grid-template-columns: 1fr;
@@ -280,6 +291,9 @@ footer>article p {
     padding: 10px 15px;
 }
 
+
+/* Contact css */
+
 .contact-icon {
     color: white;
     font-size: 20pt;
@@ -287,11 +301,6 @@ footer>article p {
     margin: 10px 0;
     background-color: var(--buttonHoverColor);
     border-radius: 100%;
-}
-
-#contact-us>p {
-    font-family: 'titleFont';
-    font-size: 20pt;
 }
 
 #contact-content {
@@ -309,12 +318,6 @@ footer>article p {
 
 #contact-content p {
     padding: 5px 0;
-}
-
-#contact-us>p {
-    width: 100%;
-    padding-top: 30px;
-    text-align: center;
 }
 
 #foundUs-content {
@@ -362,6 +365,14 @@ footer>article p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/* Cortinas css */
+
+.gallery-left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 
