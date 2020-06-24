@@ -40,9 +40,66 @@
     <div class="separator-menu"></div>
     <section class="sect-content">
         <article class="art-title">
-            <h1>Persianas</h1>
+            <h1>Tipos de Persianas</h1>
             <div class="underline-titles"></div>
         </article>
+        <article class="cortina-content">
+            <p>Trabalhamos com varios tipos de persianas, sempre visando uma ampla lista de opções para o cliente. Assim, podemos deixar seu lar ou ambiente de trabalho moderno e sofisticado.</p>
+        </article>
+    </section>
+    <section class="sect-content gallery-left">
+        <article class="art-cortinas">
+            <h2>Horizontal de Aluminio</h2>
+            <div class="underline-titles"></div>
+            <p>
+                Horizontal em Alumínio 16, 25 e 50 mm Prática e durável, se ajusta a pequenos e grandes vãos, adequando-se ao seu projeto de decoração. Conta com cores e texturas atualizadas, podendo ter acionamento manual ou motorizado.
+            </p>
+        </article>
+        <article id="art-horizontal-aluminio" class="art-gallery">
+            <div class="gallery" onclick="showFullGalleryHal()">
+                <img src="../img/cortina1.jpg" alt="Persiana1" class="gallery-photo">
+                <img src="../img/cortina2.jpg" alt="Persiana2" class="gallery-photo">
+                <img src="../img/cortina3.jpg" alt="Persiana3" class="gallery-photo">
+                <img src="../img/cortina3.jpg" alt="Persiana4" class="gallery-photo">
+            </div>
+        </article>
+    </section>
+    <section class="gallery-on-page" id="full-gallery-hal">
+        <div class="exit-gallery">
+            <button onclick="exitGalleryHal()"><i class="fas fa-times btn-exit"></i></button>
+        </div>
+        <div class="gallery-carousel">
+            <div id="carouselGalleryHal" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselGalleryHal" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselGalleryHal" data-slide-to="1"></li>
+                    <li data-target="#carouselGalleryHal" data-slide-to="2"></li>
+                    <li data-target="#carouselGalleryHal" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/cortina1.jpg" class="d-block w-100" alt="Cortina1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/cortina2.jpg" class="d-block w-100" alt="Cortina2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina4">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselGalleryHal" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselGalleryHal" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
     </section>
     <button id="btnTop" class="btn-top" onclick="voltarTopo()"><label for="btnTop">&#10145;</label></button>
     <footer>

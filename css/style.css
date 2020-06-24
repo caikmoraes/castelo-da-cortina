@@ -441,6 +441,9 @@ footer>article p {
     flex-direction: column;
 }
 
+
+/* Cortinas Gallery */
+
 #full-gallery-fn {
     left: -100vw;
     transition: all .3s ease-out;
@@ -476,6 +479,14 @@ footer>article p {
     transition: all .3s ease-out;
 }
 
+
+/* Persianas Gallery */
+
+#full-gallery-hal {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
 .exit-gallery {
     padding: 10px;
     display: flex;
@@ -487,6 +498,7 @@ footer>article p {
     border: none;
     background: transparent;
     color: white;
+    display: block;
 }
 
 .gallery-carousel {

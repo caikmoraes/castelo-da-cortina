@@ -161,6 +161,17 @@ function exitGalleryTr() {
 
 // Horizontal de Alumínio
 
+function showFullGalleryHal() {
+    this.galleryShow();
+    let gallery = document.getElementById('full-gallery-hal')
+    gallery.style.left = "0%";
+}
+
+function exitGalleryHal() {
+    this.galleryExit()
+    let gallery = document.getElementById('full-gallery-hal')
+    gallery.style.left = "100%";
+}
 // Horizontal de Madeira
 
 // Horizontal de PVC
