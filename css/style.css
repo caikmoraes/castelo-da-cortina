@@ -46,9 +46,16 @@ body {
 h1,
 h2 {
     font-family: 'titleFont';
-    font-size: 40pt;
-    font-weight: 400;
     line-height: normal;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+h2 {
+    font-size: 25pt;
 }
 
 h3 {
@@ -107,10 +114,12 @@ nav {
 .artLogo a {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 10px 5px;
     color: white;
     font-size: 16pt;
     flex-flow: row wrap;
+    flex-wrap: nowrap;
     width: fit-content;
 }
 
@@ -119,6 +128,8 @@ nav {
 }
 
 .artLogo a h3 {
+    display: flex;
+    align-items: center;
     width: 40vw;
     min-width: 154px;
     min-height: 80px;
@@ -375,6 +386,8 @@ footer>article p {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .gallery-left {
@@ -528,14 +541,6 @@ footer>article p {
 .gallery-right {
     display: grid;
     grid-template-columns: 1fr;
-}
-
-
-/* Romana CSS */
-
-#full-gallery-romana {
-    left: -100vw;
-    transition: all .3s ease-out;
 }
 
 
