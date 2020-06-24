@@ -49,10 +49,12 @@ h2 {
     line-height: normal;
     font-weight: 400;
 }
-h1{
+
+h1 {
     font-size: 30pt;
 }
-h2{
+
+h2 {
     font-size: 20pt;
 }
 
@@ -469,7 +471,8 @@ footer>article p {
 }
 
 .exit-gallery {
-    padding: 10px;
+    width: 95vw;
+    padding: 10px 20px;
     display: flex;
     justify-content: flex-end;
 }
@@ -535,6 +538,7 @@ footer>article p {
     grid-template-columns: 1fr;
 }
 
+
 /* Persianas css */
 
 #full-gallery-hal {
@@ -566,6 +570,8 @@ footer>article p {
     left: -100vw;
     transition: all .3s ease-out;
 }
+
+
 /* **********RESPONSIVES ADJUSTS********** */
 
 @media screen and (max-width: 373px) {
