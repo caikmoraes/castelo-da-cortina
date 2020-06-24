@@ -110,7 +110,7 @@ nav {
     padding: 10px 5px;
     color: white;
     font-size: 16pt;
-    flex-wrap: nowrap;
+    flex-flow: row wrap;
     width: fit-content;
 }
 
@@ -118,9 +118,10 @@ nav {
     text-decoration: none;
 }
 
-.artLogo>h3 {
-    width: 280px;
-    text-align: center;
+.artLogo a h3 {
+    width: 40vw;
+    min-width: 154px;
+    min-height: 80px;
 }
 
 .logo {
@@ -372,18 +373,19 @@ footer>article p {
 
 .gallery-left {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
 }
 
 
 /* **********RESPONSIVES ADJUSTS********** */
 
-@media screen and (max-width: 528px) {
+@media screen and (max-width: 373px) {
     .toggle {
         width: 100%;
         text-align: center;
     }
     .artLogo a {
+        width: 90vw;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
