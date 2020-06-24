@@ -161,12 +161,79 @@ function exitGalleryTr() {
 
 // Horizontal de Alumínio
 
+function showFullGalleryHal() {
+    this.galleryShow();
+    let gallery = document.getElementById('full-gallery-hal')
+    gallery.style.left = "0%";
+}
+
+function exitGalleryHal() {
+    this.galleryExit()
+    let gallery = document.getElementById('full-gallery-hal')
+    gallery.style.left = "100%";
+}
 // Horizontal de Madeira
 
+function showFullGalleryHmad() {
+    this.galleryShow();
+    let gallery = document.getElementById('full-gallery-hmad')
+    gallery.style.left = "0%";
+}
+
+function exitGalleryHmad() {
+    this.galleryExit()
+    let gallery = document.getElementById('full-gallery-hmad')
+    gallery.style.left = "100%";
+}
 // Horizontal de PVC
 
+function showFullGalleryHpvc() {
+    this.galleryShow();
+    let gallery = document.getElementById('full-gallery-hpvc')
+    gallery.style.left = "0%";
+}
+
+function exitGalleryHpvc() {
+    this.galleryExit()
+    let gallery = document.getElementById('full-gallery-hpvc')
+    gallery.style.left = "100%";
+}
 // Vertical de PVC
 
+function showFullGalleryVpvc() {
+    this.galleryShow();
+    let gallery = document.getElementById('full-gallery-vpvc')
+    gallery.style.left = "0%";
+}
+
+function exitGalleryVpvc() {
+    this.galleryExit()
+    let gallery = document.getElementById('full-gallery-vpvc')
+    gallery.style.left = "100%";
+}
 // Vertical de Tecido
 
+function showFullGalleryVtec() {
+    this.galleryShow();
+    let gallery = document.getElementById('full-gallery-vtec')
+    gallery.style.left = "0%";
+}
+
+function exitGalleryVtec() {
+    this.galleryExit()
+    let gallery = document.getElementById('full-gallery-vtec')
+    gallery.style.left = "100%";
+}
 // Persiana Rolo dupla
+
+function showFullGalleryProd() {
+    this.galleryShow();
+    let gallery = document.getElementById('full-gallery-prod')
+    gallery.style.left = "0%";
+}
+
+function exitGalleryProd() {
+    this.galleryExit()
+    let gallery = document.getElementById('full-gallery-prod')
+    gallery.style.left = "100%";
+}

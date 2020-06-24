@@ -46,9 +46,14 @@ body {
 h1,
 h2 {
     font-family: 'titleFont';
-    font-size: 40pt;
-    font-weight: 400;
     line-height: normal;
+    font-weight: 400;
+}
+h1{
+    font-size: 30pt;
+}
+h2{
+    font-size: 20pt;
 }
 
 h3 {
@@ -530,15 +535,37 @@ footer>article p {
     grid-template-columns: 1fr;
 }
 
+/* Persianas css */
 
-/* Romana CSS */
-
-#full-gallery-romana {
+#full-gallery-hal {
     left: -100vw;
     transition: all .3s ease-out;
 }
 
+#full-gallery-hmad {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
 
+#full-gallery-hpvc {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-vpvc {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-vtec {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-prod {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
 /* **********RESPONSIVES ADJUSTS********** */
 
 @media screen and (max-width: 373px) {
