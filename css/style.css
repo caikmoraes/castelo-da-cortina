@@ -127,9 +127,10 @@ nav {
 }
 
 .artLogo a h3 {
-    width: 45vw;
+    width: 40vw;
     max-height: 80px;
     min-width: 154px;
+    max-width: 309px;
     display: flex;
     align-items: center;
 }
