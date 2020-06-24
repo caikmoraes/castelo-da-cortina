@@ -371,6 +371,12 @@ footer>article p {
 
 /* Cortinas css */
 
+.art-gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .gallery-left {
     display: grid;
     grid-template-columns: 1fr;
@@ -382,12 +388,8 @@ footer>article p {
     grid-template-rows: repeat(2, 1fr);
     max-width: 500px;
     background-color: rgba(53, 53, 53, 0.328);
-    padding: 5px;
     border-radius: 5px;
-}
-
-#gallery-toggle {
-    display: none;
+    text-align: center;
 }
 
 .gallery-photo {
@@ -426,8 +428,38 @@ footer>article p {
     flex-direction: column;
 }
 
-#full-gallery {
-    left: -100%;
+#full-gallery-fn {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-romana {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-celulares {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-tecidos {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-rolo {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-tetos {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-tr {
+    left: -100vw;
     transition: all .3s ease-out;
 }
 
@@ -448,12 +480,14 @@ footer>article p {
     padding: 30px;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .carousel {
     overflow: hidden;
+    max-width: 700px;
+    max-height: 394px;
 }
 
 .carousel-control-prev-icon,
@@ -484,6 +518,24 @@ footer>article p {
 
 .carousel-indicators {
     bottom: -20px;
+}
+
+.carousel-item img {
+    max-width: 700px;
+    max-height: 394px;
+}
+
+.gallery-right {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/* Romana CSS */
+
+#full-gallery-romana {
+    left: -100vw;
+    transition: all .3s ease-out;
 }
 
 
@@ -585,5 +637,22 @@ footer>article p {
     }
     .page-buttons {
         grid-column: 3;
+    }
+    .gallery-left {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .art-gallery {
+        grid-column: 2/3;
+    }
+    .gallery-right {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-right .art-cortinas {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .gallery-right .art-gallery {
+        grid-column: 1;
+        grid-row: 1;
     }
 }
