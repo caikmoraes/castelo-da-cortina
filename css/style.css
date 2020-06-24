@@ -55,7 +55,11 @@ h1 {
 }
 
 h2 {
+<<<<<<< HEAD
     font-size: 25pt;
+=======
+    font-size: 20pt;
+>>>>>>> thiago-dev
 }
 
 h3 {
@@ -488,7 +492,8 @@ footer>article p {
 }
 
 .exit-gallery {
-    padding: 10px;
+    width: 95vw;
+    padding: 10px 20px;
     display: flex;
     justify-content: flex-end;
 }
@@ -556,6 +561,42 @@ footer>article p {
 }
 
 
+<<<<<<< HEAD
+=======
+/* Persianas css */
+
+#full-gallery-hal {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-hmad {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-hpvc {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-vpvc {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-vtec {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-prod {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+
+>>>>>>> thiago-dev
 /* **********RESPONSIVES ADJUSTS********** */
 
 @media screen and (max-width: 373px) {
