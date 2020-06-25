@@ -389,6 +389,7 @@ footer>article p {
     width: 100%;
     display: flex;
     justify-content: center;
+    min-height: 300px;
 }
 
 .gallery {
@@ -404,6 +405,7 @@ footer>article p {
 .gallery-photo {
     width: 100%;
     max-height: 25vh;
+    min-height: 150px;
     padding: 3px;
 }
 
