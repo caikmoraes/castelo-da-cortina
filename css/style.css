@@ -380,15 +380,15 @@ footer>article p {
 
 /* Cortinas css */
 
+.gallery-left {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 .art-gallery {
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.gallery-left {
-    display: grid;
-    grid-template-columns: 1fr;
 }
 
 .gallery {
@@ -676,6 +676,12 @@ footer>article p {
     .gallery-left {
         grid-template-columns: repeat(2, 1fr);
     }
+    .gallery-left .art-cortinas {
+        padding-right: 20px;
+    }
+    .gallery-left .art-gallery {
+        justify-content: center;
+    }
     .art-gallery {
         grid-column: 2/3;
     }
@@ -683,11 +689,13 @@ footer>article p {
         grid-template-columns: repeat(2, 1fr);
     }
     .gallery-right .art-cortinas {
+        padding-left: 20px;
         grid-column: 2;
         grid-row: 1;
     }
     .gallery-right .art-gallery {
         grid-column: 1;
         grid-row: 1;
+        justify-content: center;
     }
 }
