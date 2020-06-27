@@ -575,6 +575,19 @@ footer>article p {
     transition: all .3s ease-out;
 }
 
+/* Toldos css */
+
+#full-gallery-toltec {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+#full-gallery-toltrans {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
+
 
 /* **********RESPONSIVES ADJUSTS********** */
 
