@@ -338,8 +338,9 @@ footer>article p {
 }
 
 #foundUs-content>iframe {
-    width: 50vw;
+    width: 80vw;
     height: 70vh;
+    max-width: 900px;
 }
 
 .btn-top {
