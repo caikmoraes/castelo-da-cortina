@@ -114,7 +114,7 @@ nav {
 .artLogo a {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 10px 5px;
     color: white;
     font-size: 16pt;
@@ -575,6 +575,7 @@ footer>article p {
     transition: all .3s ease-out;
 }
 
+
 /* Toldos css */
 
 #full-gallery-toltec {
@@ -586,7 +587,6 @@ footer>article p {
     left: -100vw;
     transition: all .3s ease-out;
 }
-
 
 
 /* **********RESPONSIVES ADJUSTS********** */
