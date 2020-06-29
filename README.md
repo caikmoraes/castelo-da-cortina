@@ -1,4 +1,5 @@
 # Castelo da Cortina
-Autores: 
+<strong>Autores:</strong> 
 Caik Moraes e Thiago Rodrigues </br>
-Site empresarial para divulgação de trabalhos já realizados.
+Site para divulgação da empresa Castelo da Cortina.</br>
+Portifólio com imagens retiradas de trabalhos já realizdos pelo dono da empresa, Zelito das Cortinas.
