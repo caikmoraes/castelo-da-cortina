@@ -237,3 +237,32 @@ function exitGalleryProd() {
     let gallery = document.getElementById('full-gallery-prod')
     gallery.style.left = "100%";
 }
+
+// ********************Gallery function Toldos PAGE********************
+
+// Toldo de tecido
+
+function showFullGalleryToldotec() {
+    this.galleryShow();
+    let gallery = document.getElementById('full-gallery-toltec')
+    gallery.style.left = "0%";
+}
+
+function exitGalleryToldotec() {
+    this.galleryExit()
+    let gallery = document.getElementById('full-gallery-toltec')
+    gallery.style.left = "100%";
+}
+// Toldo transparente
+
+function showFullGalleryToldotrans() {
+    this.galleryShow();
+    let gallery = document.getElementById('full-gallery-toltrans')
+    gallery.style.left = "0%";
+}
+
+function exitGalleryToldotrans() {
+    this.galleryExit()
+    let gallery = document.getElementById('full-gallery-toltrans')
+    gallery.style.left = "100%";
+}
