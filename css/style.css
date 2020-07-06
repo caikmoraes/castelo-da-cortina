@@ -19,6 +19,7 @@
     text-decoration: none;
     overflow-x: hidden;
     box-sizing: border-box;
+
     /*botao de voltar ao topo */
     scroll-behavior: smooth;
 }
@@ -369,6 +370,32 @@ footer>article p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Formulario de email */
+.content{
+    display: flex;
+    justify-content:center;
+}
+
+.contato{
+    width: 100%;
+    max-width: 500px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.field{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--decorationColor);
+}
+
+.textarea{
+    height: 150px;
 }
 
 
