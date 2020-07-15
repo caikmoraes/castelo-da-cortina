@@ -341,6 +341,7 @@ footer>article p {
     width: 80vw;
     height: 70vh;
     max-width: 900px;
+    border: none;
 }
 
 .btn-top {
