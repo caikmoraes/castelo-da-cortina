@@ -93,13 +93,13 @@ function exitGalleryRomana() {
 
 function showFullGalleryCelular() {
     this.galleryShow();
-    let gallery = document.getElementById('full-gallery-celular')
+    let gallery = document.getElementById('full-gallery-celulares')
     gallery.style.left = "0%";
 }
 
 function exitGalleryCelular() {
     this.galleryExit()
-    let gallery = document.getElementById('full-gallery-celular')
+    let gallery = document.getElementById('full-gallery-celulares')
     gallery.style.left = "100%";
 }
 // Tecidos
