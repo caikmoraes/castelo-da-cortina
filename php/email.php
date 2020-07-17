@@ -11,7 +11,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
             "Email".$email. "\n".
             "Mensagem".$mensagem;
     $header = $email."\r\n".
-                "Reply-to:".$email."\r\n".
+                "Reply-to:".$email."\e\n".
                 "X=Mailer:PHP/".phpversion();
     
     if(mail($to,$subject,$body,$header)){
