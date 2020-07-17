@@ -8,9 +8,10 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
     $to = "castelodacortina@hotmail.com";
     $subject = $about != null ? $about : "Email enviado pelo site";
     $body = "Nome:" .$nome. "\n".
-            "Email".$email. "\n".
+            "Email:".$email. "\n".
+            "Assunto:".$subject. "\n".
             "Mensagem".$mensagem;
-    $header = $email."\r\n".
+    $header = "From:".$email."\r\n".
                 "Reply-to:".$email."\e\n".
                 "X=Mailer:PHP/".phpversion();
     
