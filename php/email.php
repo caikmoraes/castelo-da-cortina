@@ -6,12 +6,12 @@ $nome = addslashes($_POST['name']
 $email = addslashes($_POST['email'])
 $mensagem = addslashes($_POST['message'])
 
-$to = "#";
+$to = "castelodacortina@hotmail.com";
 $subject = "Teste - formulario de email"
 $body = "Nome:" .$nome. "\n".
         "Email".$email. "\n".
         "Mensagem".$mensagem;
-$header = "#"."\r\n".
+$header = $email."\r\n".
             "Reply-to:".$email."\r\n".
             "X=Mailer:PHP/".phpversion();
 
