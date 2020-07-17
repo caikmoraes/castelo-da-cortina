@@ -85,6 +85,11 @@ h3 {
     text-align: center;
 }
 
+.page-buttons:hover{
+    text-decoration: none;
+    color: white;
+    background-color: var(--decorationColor);
+}
 
 /* Fontes */
 
