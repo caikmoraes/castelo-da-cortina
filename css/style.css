@@ -124,7 +124,6 @@ nav {
     color: white;
     font-size: 16pt;
     flex-flow: row wrap;
-    flex-wrap: nowrap;
     width: fit-content;
 }
 
