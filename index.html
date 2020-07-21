@@ -28,10 +28,10 @@
                     </a>
                 </article>
             </li>
-            <li class="item" id="cortina"><a href="pages/cortinas.html">Cortinas</a></li>
-            <li class="item"><a href="pages/persianas.html" id="persiana">Persianas</a></li>
-            <li class="item"><a href="pages/toldos.html" id="toldo">Toldos</a></li>
-            <li class="item button"><a href="pages/contato.html" id="contato">Contato</a></li>
+            <li class="item"><a class="menu-link" href="pages/cortinas.html" id="cortinas">Cortinas</a></li>
+            <li class="item"><a class="menu-link" href="pages/persianas.html" id="persianas">Persianas</a></li>
+            <li class="item"><a class="menu-link" href="pages/toldos.html" id="toldos">Toldos</a></li>
+            <li class="item button"><a class="menu-link" href="pages/contato.html" id="contato">Contato</a></li>
             <li class="toggle">
                 <label class="bars" id="open-menu" onclick="openMenu()">&#9776;</label>
                 <label class="bars" id="exit-menu" onclick="exitMenu()">&#88;</label>
@@ -110,8 +110,11 @@
     <button id="btnTop" class="btn-top" onclick="voltarTopo()"><i class="fas fa-chevron-up"></i></button>
     <footer>
         <article>
-            <p>&copy; 2020 - Castelo da Cortina.</p>
-            <p>Todos os direitos reservados.</p>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/casteloda.cortina" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://www.instagram.com/castelodacortina/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <p>&copy; 2020 Castelo da Cortina. Todos os direitos reservados.</p>
         </article>
     </footer>
 </body>

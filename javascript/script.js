@@ -1,3 +1,7 @@
+window.onload = function () {
+    this.getPage()
+}
+
 // Menu function
 $(function() {
     $(".toggle").on("click", function() {
@@ -17,6 +21,16 @@ function openMenu() {
 function exitMenu() {
     document.getElementById('open-menu').style.display = 'block'
     document.getElementById('exit-menu').style.display = 'none'
+}
+
+function getPage() {
+    const menuLink = document.querySelectorAll('.menu-link')
+    const url = window.location.href
+    menuLink.forEach(element => {
+        if (url.indexOf(`/${element.id}.html`) != -1) {
+            element.classList.add('active')
+        }
+    })
 }
 
 //botao de voltar ao topo

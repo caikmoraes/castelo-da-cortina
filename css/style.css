@@ -55,7 +55,7 @@ h1 {
 }
 
 h2 {
-    font-size: 27pt;
+    font-size: 25pt;
 }
 
 h3 {
@@ -119,11 +119,11 @@ nav {
 .artLogo a {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 10px 5px;
     color: white;
     font-size: 16pt;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     width: fit-content;
 }
 
@@ -132,6 +132,8 @@ nav {
 }
 
 .artLogo a h3 {
+    display: flex;
+    align-items: center;
     width: 40vw;
     max-height: 80px;
     min-width: 154px;
@@ -183,7 +185,10 @@ nav img {
     background-color: var(--decorationColor);
     color: var(--textMenuColor);
 }
-
+.menu .item .active {
+    background-color: var(--decorationColor);
+    color: var(--textMenuColor);
+}
 .menu {
     margin: 0;
     padding: 0;
@@ -232,6 +237,18 @@ footer>article {
 
 footer>article p {
     padding: 10px 0;
+}
+.social {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.social li {
+    margin: 0 1em;
+}
+.social li a i{
+    font-size: 25pt;
+    color: white;
 }
 
 
@@ -390,18 +407,7 @@ footer>article p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.field{
-    padding: 10px;
-    margin-bottom: 15px;
-    width: 100%;
-    max-width: 600px;
-    border: 1px solid var(--decorationColor);
-}
-
-textarea{
-    height: 300px;
+    padding: 20px;
 }
 
 
@@ -468,6 +474,9 @@ textarea{
     flex-direction: column;
 }
 
+
+/* Cortinas Gallery */
+
 #full-gallery-fn {
     left: -100vw;
     transition: all .3s ease-out;
@@ -503,6 +512,14 @@ textarea{
     transition: all .3s ease-out;
 }
 
+
+/* Persianas Gallery */
+
+#full-gallery-hal {
+    left: -100vw;
+    transition: all .3s ease-out;
+}
+
 .exit-gallery {
     width: 95vw;
     padding: 10px 20px;
@@ -515,6 +532,7 @@ textarea{
     border: none;
     background: transparent;
     color: white;
+    display: block;
 }
 
 .gallery-carousel {
@@ -571,7 +589,6 @@ textarea{
     grid-template-columns: 1fr;
 }
 
-
 /* Persianas css */
 
 #full-gallery-hal {
@@ -604,7 +621,6 @@ textarea{
     transition: all .3s ease-out;
 }
 
-
 /* Toldos css */
 
 #full-gallery-toltec {
@@ -616,7 +632,6 @@ textarea{
     left: -100vw;
     transition: all .3s ease-out;
 }
-
 
 /* **********RESPONSIVES ADJUSTS********** */
 
