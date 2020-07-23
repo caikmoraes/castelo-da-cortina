@@ -7,11 +7,10 @@
     <meta name="author" content="Caik Moraes - caikdemoraes@gmail.com">
     <meta name="author" content="Thiago Rodrigues - thiagof1212@gmail.com">
     <script src="https://kit.fontawesome.com/883e8bb361.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" />
     <link rel="shortcut icon" href="../img/logo-peq.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../javascript/script.js"></script>
@@ -60,16 +59,52 @@
                 seda, buriti, pele de bambú, entre outras.
             </p>
         </article>
-        <article id="art-fibra-natural" class="art-gallery">
-            <div class="gallery" onclick="showFullGalleryFn()">
-                <img src="../img/cortina1.jpg" alt="Cortina1" class="gallery-photo">
-                <img src="../img/cortina2.jpg" alt="Cortina2" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina3" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina4" class="gallery-photo">
+        <div class="art-gallery">
+            <div class="gallerys">
+                <div class="gallery-item">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural1.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural1.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural2.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural2.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural3.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural3.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item hidden firstHidden">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural4.jpeg">
+                        <span class=".gallery-hidden-span"></span>
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural4.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item hidden">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural5.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural5.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item hidden">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural6.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural6.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item hidden">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural7.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural7.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item hidden">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural8.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural8.jpeg" alt="">
+                    </a>
+                </div>
             </div>
-        </article>
+        </div>
     </section>
-
     <section class="sect-content gallery-right">
         <article class="art-cortinas">
             <h2>Romana</h2>
@@ -79,14 +114,51 @@
                 gosto.
             </p>
         </article>
-        <article id="art-romana" class="art-gallery">
-            <div class="gallery" onclick="showFullGalleryRomana()">
-                <img src="../img/cortina1.jpg" alt="Cortina1" class="gallery-photo">
-                <img src="../img/cortina2.jpg" alt="Cortina2" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina3" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina4" class="gallery-photo">
+        <div class="art-gallery">
+            <div class="gallerys">
+                <div class="gallery-item">
+                    <a href="../img/img_cortinas/rolos/rolos1.jpeg">
+                        <img src="../img/img_cortinas/rolos/rolos1.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="../img/img_cortinas/rolos/rolos2.jpeg">
+                        <img src="../img/img_cortinas/rolos/rolos2.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="../img/img_cortinas/rolos/rolos3.jpeg">
+                        <img src="../img/img_cortinas/rolos/rolos3.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item hidden firstHidden">
+                    <a href="../img/img_cortinas/rolos/rolos4.jpeg">
+                        <span class=".gallery-hidden-span"></span>
+                        <img src="../img/img_cortinas/rolos/rolos4.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item hidden">
+                    <a href="../img/img_cortinas/rolos/rolos5.jpeg">
+                        <img src="../img/img_cortinas/rolos/rolos5.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item hidden">
+                    <a href="../img/img_cortinas/rolos/rolos6.jpeg">
+                        <img src="../img/img_cortinas/rolos/rolos6.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item hidden">
+                    <a href="../img/img_cortinas/rolos/rolos7.jpeg">
+                        <img src="../img/img_cortinas/rolos/rolos7.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item hidden">
+                    <a href="../img/img_cortinas/rolos/rolos8.jpeg">
+                        <img src="../img/img_cortinas/rolos/rolos8.jpeg" alt="">
+                    </a>
+                </div>
             </div>
-        </article>
+        </div>
     </section>
     <section class="sect-content gallery-left">
         <article class="art-cortinas">
@@ -96,14 +168,7 @@
                 Proporcionam luminosidade no interior do ambiente, ao mesmo tempo bloqueia os raios U.V, oferecendo um isolamento térmico e acústico. É uma excelente opção para ambientes sofisticados. Disponíveis nos tecidos black-out e translúcido.
             </p>
         </article>
-        <article id="art-celular" class="art-gallery">
-            <div class="gallery" onclick="showFullGalleryCelular()">
-                <img src="../img/cortina1.jpg" alt="Cortina1" class="gallery-photo">
-                <img src="../img/cortina2.jpg" alt="Cortina2" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina3" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina4" class="gallery-photo">
-            </div>
-        </article>
+        
     </section>
     <section class="sect-content gallery-right">
         <article class="art-cortinas">
@@ -114,14 +179,7 @@
                 oferecendo sempre o que há de melhor nos materiais utilizados e seguindo as ultimas tendências em decoração
             </p>
         </article>
-        <article id="art-tecido" class="art-gallery">
-            <div class="gallery" onclick="showFullGalleryTecidos()">
-                <img src="../img/cortina1.jpg" alt="Cortina1" class="gallery-photo">
-                <img src="../img/cortina2.jpg" alt="Cortina2" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina3" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina4" class="gallery-photo">
-            </div>
-        </article>
+        
     </section>
     <section class="sect-content gallery-left">
         <article class="art-cortinas">
@@ -132,14 +190,7 @@
                 tempo controlam a intensidade de calor. *Black-out elimina a claridade externa.
             </p>
         </article>
-        <article id="art-rolo" class="art-gallery">
-            <div class="gallery" onclick="showFullGalleryRolo()">
-                <img src="../img/cortina1.jpg" alt="Cortina1" class="gallery-photo">
-                <img src="../img/cortina2.jpg" alt="Cortina2" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina3" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina4" class="gallery-photo">
-            </div>
-        </article>
+       
     </section>
     <section class="sect-content gallery-right">
         <article class="art-cortinas">
@@ -149,14 +200,7 @@
                 Ideal para a proteção solar interna em tetos de vidro. Produzida com mecanismos de alta tecnologia e tecidos de excelente qualidade. A Cortina de Teto, proporciona aos ambientes conforto térmico, controle dos raios solares e da luminosidade do ambiente.
             </p>
         </article>
-        <article id="art-tetos" class="art-gallery">
-            <div class="gallery" onclick="showFullGalleryTetos()">
-                <img src="../img/cortina1.jpg" alt="Cortina1" class="gallery-photo">
-                <img src="../img/cortina2.jpg" alt="Cortina2" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina3" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina4" class="gallery-photo">
-            </div>
-        </article>
+       
     </section>
     <section class="sect-content gallery-left">
         <article class="art-cortinas">
@@ -166,274 +210,9 @@
                 As cortinas Translúcidas obstruem a luz solar parcialmente proporcionando uma difusão melhor da luz solar e claridade, garantindo total proteção ao ambiente, e, ao mesmo tempo, valorizando a decoração.
             </p>
         </article>
-        <article id="art-translucida" class="art-gallery">
-            <div class="gallery" onclick="showFullGalleryTr()">
-                <img src="../img/cortina1.jpg" alt="Cortina1" class="gallery-photo">
-                <img src="../img/cortina2.jpg" alt="Cortina2" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina3" class="gallery-photo">
-                <img src="../img/cortina3.jpg" alt="Cortina4" class="gallery-photo">
-            </div>
-        </article>
+        
     </section>
-    <section class="gallery-on-page" id="full-gallery-fn">
-        <div class="exit-gallery">
-            <button onclick="exitGalleryFn()"><i class="fas fa-times btn-exit"></i></button>
-        </div>
-        <div class="gallery-carousel">
-            <div id="carouselGallery" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselGallery" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselGallery" data-slide-to="1"></li>
-                    <li data-target="#carouselGallery" data-slide-to="2"></li>
-                    <li data-target="#carouselGallery" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/cortina1.jpg" class="d-block w-100" alt="Cortina1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina2.jpg" class="d-block w-100" alt="Cortina2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina4">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselGallery" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselGallery" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="gallery-on-page" id="full-gallery-romana">
-        <div class="exit-gallery">
-            <button onclick="exitGalleryRomana()"><i class="fas fa-times btn-exit"></i></button>
-        </div>
-        <div class="gallery-carousel">
-            <div id="carouselGalleryRomana" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselGalleryRomana" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselGalleryRomana" data-slide-to="1"></li>
-                    <li data-target="#carouselGalleryRomana" data-slide-to="2"></li>
-                    <li data-target="#carouselGalleryRomana" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/cortina1.jpg" class="d-block w-100" alt="Cortina1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina2.jpg" class="d-block w-100" alt="Cortina2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina4">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselGalleryRomana" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselGalleryRomana" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="gallery-on-page" id="full-gallery-celulares">
-        <div class="exit-gallery">
-            <button onclick="exitGalleryCelular()"><i class="fas fa-times btn-exit"></i></button>
-        </div>
-        <div class="gallery-carousel">
-            <div id="carouselGalleryCelulares" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselGalleryCelulares" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselGalleryCelulares" data-slide-to="1"></li>
-                    <li data-target="#carouselGalleryCelulares" data-slide-to="2"></li>
-                    <li data-target="#carouselGalleryCelulares" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/cortina1.jpg" class="d-block w-100" alt="Cortina1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina2.jpg" class="d-block w-100" alt="Cortina2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina4">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselGalleryCelulares" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselGalleryCelulares" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="gallery-on-page" id="full-gallery-tecidos">
-        <div class="exit-gallery">
-            <button onclick="exitGalleryTecidos()"><i class="fas fa-times btn-exit"></i></button>
-        </div>
-        <div class="gallery-carousel">
-            <div id="carouselGalleryTecidos" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselGalleryTecidos" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselGalleryTecidos" data-slide-to="1"></li>
-                    <li data-target="#carouselGalleryTecidos" data-slide-to="2"></li>
-                    <li data-target="#carouselGalleryTecidos" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/cortina1.jpg" class="d-block w-100" alt="Cortina1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina2.jpg" class="d-block w-100" alt="Cortina2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina4">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselGalleryTecidos" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselGalleryTecidos" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="gallery-on-page" id="full-gallery-rolo">
-        <div class="exit-gallery">
-            <button onclick="exitGalleryRolo()"><i class="fas fa-times btn-exit"></i></button>
-        </div>
-        <div class="gallery-carousel">
-            <div id="carouselGalleryRolo" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselGalleryRolo" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselGalleryRolo" data-slide-to="1"></li>
-                    <li data-target="#carouselGalleryRolo" data-slide-to="2"></li>
-                    <li data-target="#carouselGalleryRolo" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/cortina1.jpg" class="d-block w-100" alt="Cortina1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina2.jpg" class="d-block w-100" alt="Cortina2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina4">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselGalleryRolo" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselGalleryRolo" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="gallery-on-page" id="full-gallery-tetos">
-        <div class="exit-gallery">
-            <button onclick="exitGalleryTetos()"><i class="fas fa-times btn-exit"></i></button>
-        </div>
-        <div class="gallery-carousel">
-            <div id="carouselGalleryTetos" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselGalleryTetos" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselGalleryTetos" data-slide-to="1"></li>
-                    <li data-target="#carouselGalleryTetos" data-slide-to="2"></li>
-                    <li data-target="#carouselGalleryTetos" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/cortina1.jpg" class="d-block w-100" alt="Cortina1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina2.jpg" class="d-block w-100" alt="Cortina2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina4">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselGalleryTetos" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselGalleryTetos" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="gallery-on-page" id="full-gallery-tr">
-        <div class="exit-gallery">
-            <button onclick="exitGalleryTr()"><i class="fas fa-times btn-exit"></i></button>
-        </div>
-        <div class="gallery-carousel">
-            <div id="carouselGalleryTr" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselGalleryTr" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselGalleryTr" data-slide-to="1"></li>
-                    <li data-target="#carouselGalleryTr" data-slide-to="2"></li>
-                    <li data-target="#carouselGalleryTr" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/cortina1.jpg" class="d-block w-100" alt="Cortina1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina2.jpg" class="d-block w-100" alt="Cortina2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/cortina3.jpg" class="d-block w-100" alt="Cortina4">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselGalleryTr" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselGalleryTr" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </section>
+    
     <button id="btnTop" class="btn-top" onclick="voltarTopo()"><i class="fas fa-chevron-up"></i></button>
     <footer>
         <article>
@@ -444,6 +223,18 @@
             <p>&copy; 2020 Castelo da Cortina. Todos os direitos reservados.</p>
         </article>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('.gallerys').magnificPopup({
+                type: 'image',
+                delegate: 'a',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

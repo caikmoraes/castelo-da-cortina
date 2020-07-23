@@ -1,5 +1,6 @@
 window.onload = function () {
     this.getPage()
+    this.getImage()
 }
 
 // Menu function
@@ -53,6 +54,23 @@ function voltarTopo() {
 }
 
 // ********************Gallery function CORTINAS PAGE********************
+function getImage() {
+    const galleries = document.querySelectorAll('.gallerys')
+    console.log(galleries)
+    galleries.forEach(gallery => this.getNumberOfImages(gallery))
+}
+
+function getNumberOfImages(gallery) {
+    const linksImg = document.querySelectorAll('.gallery-item')
+    const linksLenght = linksImg.length
+    console.log(linksLenght)
+    this.setNumberOfImages(linksLenght)
+}
+function setNumberOfImages(images) {
+    const spans = document.querySelectorAll('.gallery-hidden-span')
+    spans.forEach(span => span.innerHTML = `<h3>+${images}</h3>`)
+}
+
 function galleryShow() {
     let scrollPosition = [
         self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
