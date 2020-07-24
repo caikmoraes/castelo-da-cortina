@@ -414,13 +414,17 @@ footer>article p {
 
 /* Cortinas css */
 /* Cortinas Gallery */
+.art-gallery {
+    margin: auto;
+}
 .gallerys{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 0.35fr);
-    background-color: lightgray;
+    background-color: #999999;
     padding: 5px;
     border-radius: 5px;
+    max-width: 500px;
 }
 
 .gallerys .gallery-item:nth-child(1) {
@@ -447,13 +451,14 @@ footer>article p {
 }
 .gallerys .gallery-item.hidden.firstHidden{
     display: block;
+    position: relative;
 }
 .gallerys .gallery-item.hidden {
     display: none;
 }
-.gallerys .gallery-item {
+/* .gallerys .gallery-item {
     position: relative;
-}
+} */
 .gallerys .gallery-item.hidden.firstHidden .gallery-hidden-span {
     position: absolute;
     width: 100%;
@@ -462,6 +467,9 @@ footer>article p {
     color: white;
     font-size: 20pt;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: 0px;
 }
 /* Persianas Gallery */
@@ -704,6 +712,5 @@ footer>article p {
     .gallery-right .art-gallery {
         grid-column: 1;
         grid-row: 1;
-        justify-content: center;
     }
 }

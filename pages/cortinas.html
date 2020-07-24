@@ -60,7 +60,7 @@
             </p>
         </article>
         <div class="art-gallery">
-            <div class="gallerys">
+            <div id="fibraNatural" class="gallerys">
                 <div class="gallery-item">
                     <a href="../img/img_cortinas/fibraNatural/fibraNatural1.jpeg">
                         <img src="../img/img_cortinas/fibraNatural/fibraNatural1.jpeg" alt="">
@@ -78,7 +78,7 @@
                 </div>
                 <div class="gallery-item hidden firstHidden">
                     <a href="../img/img_cortinas/fibraNatural/fibraNatural4.jpeg">
-                        <span class=".gallery-hidden-span"></span>
+                        <span class="gallery-hidden-span"></span>
                         <img src="../img/img_cortinas/fibraNatural/fibraNatural4.jpeg" alt="">
                     </a>
                 </div>
@@ -115,46 +115,51 @@
             </p>
         </article>
         <div class="art-gallery">
-            <div class="gallerys">
+            <div id="romana" class="gallerys">
                 <div class="gallery-item">
-                    <a href="../img/img_cortinas/rolos/rolos1.jpeg">
-                        <img src="../img/img_cortinas/rolos/rolos1.jpeg" alt="">
+                    <a href="../img/img_cortinas/romana/romana1.jpeg">
+                        <img src="../img/img_cortinas/romana/romana1.jpeg" alt="">
                     </a>
                 </div>
                 <div class="gallery-item">
-                    <a href="../img/img_cortinas/rolos/rolos2.jpeg">
-                        <img src="../img/img_cortinas/rolos/rolos2.jpeg" alt="">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural2.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural2.jpeg" alt="">
                     </a>
                 </div>
                 <div class="gallery-item">
-                    <a href="../img/img_cortinas/rolos/rolos3.jpeg">
-                        <img src="../img/img_cortinas/rolos/rolos3.jpeg" alt="">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural3.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural3.jpeg" alt="">
                     </a>
                 </div>
                 <div class="gallery-item hidden firstHidden">
-                    <a href="../img/img_cortinas/rolos/rolos4.jpeg">
-                        <span class=".gallery-hidden-span"></span>
-                        <img src="../img/img_cortinas/rolos/rolos4.jpeg" alt="">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural4.jpeg">
+                        <span class="gallery-hidden-span"></span>
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural4.jpeg" alt="">
                     </a>
                 </div>
                 <div class="gallery-item hidden">
-                    <a href="../img/img_cortinas/rolos/rolos5.jpeg">
-                        <img src="../img/img_cortinas/rolos/rolos5.jpeg" alt="">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural5.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural5.jpeg" alt="">
                     </a>
                 </div>
                 <div class="gallery-item hidden">
-                    <a href="../img/img_cortinas/rolos/rolos6.jpeg">
-                        <img src="../img/img_cortinas/rolos/rolos6.jpeg" alt="">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural6.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural6.jpeg" alt="">
                     </a>
                 </div>
                 <div class="gallery-item hidden">
-                    <a href="../img/img_cortinas/rolos/rolos7.jpeg">
-                        <img src="../img/img_cortinas/rolos/rolos7.jpeg" alt="">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural7.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural7.jpeg" alt="">
                     </a>
                 </div>
                 <div class="gallery-item hidden">
-                    <a href="../img/img_cortinas/rolos/rolos8.jpeg">
-                        <img src="../img/img_cortinas/rolos/rolos8.jpeg" alt="">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural8.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural8.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="gallery-item hidden">
+                    <a href="../img/img_cortinas/fibraNatural/fibraNatural9.jpeg">
+                        <img src="../img/img_cortinas/fibraNatural/fibraNatural9.jpeg" alt="">
                     </a>
                 </div>
             </div>
@@ -168,7 +173,6 @@
                 Proporcionam luminosidade no interior do ambiente, ao mesmo tempo bloqueia os raios U.V, oferecendo um isolamento térmico e acústico. É uma excelente opção para ambientes sofisticados. Disponíveis nos tecidos black-out e translúcido.
             </p>
         </article>
-        
     </section>
     <section class="sect-content gallery-right">
         <article class="art-cortinas">
@@ -226,7 +230,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
-            $('.gallerys').magnificPopup({
+            $('#fibraNatural').magnificPopup({
+                type: 'image',
+                delegate: 'a',
+                gallery: {
+                    enabled: true
+                }
+            });
+            $('#romana').magnificPopup({
                 type: 'image',
                 delegate: 'a',
                 gallery: {

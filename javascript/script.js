@@ -61,14 +61,14 @@ function getImage() {
 }
 
 function getNumberOfImages(gallery) {
-    const linksImg = document.querySelectorAll('.gallery-item')
+    const linksImg = gallery.querySelectorAll('.gallery-item')
     const linksLenght = linksImg.length
     console.log(linksLenght)
-    this.setNumberOfImages(linksLenght)
+    this.setNumberOfImages(linksLenght, gallery)
 }
-function setNumberOfImages(images) {
-    const spans = document.querySelectorAll('.gallery-hidden-span')
-    spans.forEach(span => span.innerHTML = `<h3>+${images}</h3>`)
+function setNumberOfImages(images, gallery) {
+    const span = gallery.querySelector('.gallery-hidden-span')
+    span.innerHTML = `<h3>+${images}</h3>`
 }
 
 function galleryShow() {
