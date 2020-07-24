@@ -298,3 +298,21 @@ function exitGalleryToldotrans() {
     let gallery = document.getElementById('full-gallery-toltrans')
     gallery.style.left = "100%";
 }
+
+// Galleries JQuery
+$(document).ready(function() {
+    $('#fibraNatural').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#romana').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+});
