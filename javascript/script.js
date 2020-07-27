@@ -317,6 +317,39 @@ $(document).ready(function() {
         }
     });
 
+$('#celulares').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    $('#tecido').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    $('#rolos').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    $('#translucidas').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+
+
     // Pagina Persianas
     $('#horAluminio').magnificPopup({
         type: 'image',
