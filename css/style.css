@@ -413,106 +413,73 @@ footer>article p {
 
 
 /* Cortinas css */
-
-.gallery-left {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.art-gallery {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    min-height: 300px;
-}
-
-.gallery {
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    max-width: 500px;
-    background-color: rgba(53, 53, 53, 0.328);
-    border-radius: 5px;
-    text-align: center;
-}
-
-.gallery-photo {
-    width: 100%;
-    max-height: 25vh;
-    min-height: 150px;
-    padding: 3px;
-}
-
-.gallery-photo:nth-child(1) {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.gallery-photo:nth-child(2) {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.gallery-photo:nth-child(3) {
-    grid-row: 2;
-    grid-column: 1;
-}
-
-.gallery-photo:nth-child(4) {
-    grid-row: 2;
-    grid-column: 2;
-}
-
-.gallery-on-page {
-    top: 0;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.87);
+/* Cortinas Gallery */
+.art-cortinas {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
+}
+.art-gallery {
+    margin: auto;
+    height: fit-content;
+}
+.gallerys{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 18vh);
+    background-color: #999999;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 500px;
 }
 
-
-/* Cortinas Gallery */
-
-#full-gallery-fn {
-    left: -100vw;
-    transition: all .3s ease-out;
+.gallerys .gallery-item:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
 }
-
-#full-gallery-romana {
-    left: -100vw;
-    transition: all .3s ease-out;
+.gallerys .gallery-item:nth-child(2) {
+    grid-row: 1;
+    grid-column: 2;
 }
-
-#full-gallery-celulares {
-    left: -100vw;
-    transition: all .3s ease-out;
+.gallerys .gallery-item:nth-child(3) {
+    grid-row: 2;
+    grid-column: 1;
 }
-
-#full-gallery-tecidos {
-    left: -100vw;
-    transition: all .3s ease-out;
+.gallerys .gallery-item.hidden {
+    grid-column: 2;
+    grid-row: 2;
 }
-
-#full-gallery-rolo {
-    left: -100vw;
-    transition: all .3s ease-out;
+.gallerys .gallery-item img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1px;
 }
-
-#full-gallery-tetos {
-    left: -100vw;
-    transition: all .3s ease-out;
+.gallerys .gallery-item.hidden.firstHidden{
+    display: block;
+    position: relative;
 }
-
-#full-gallery-tr {
-    left: -100vw;
-    transition: all .3s ease-out;
+.gallerys .gallery-item.hidden{
+    display: none;
 }
-
-
+.gallerys .gallery-item {
+    position: relative;
+}
+.gallerys .gallery-item.hidden.firstHidden .gallery-hidden-span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.651);
+    color: white;
+    font-size: 20pt;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+}
 /* Persianas Gallery */
 
 #full-gallery-hal {
@@ -583,10 +550,13 @@ footer>article p {
 .carousel-indicators {
     bottom: -20px;
 }
-
+.gallery-left {
+    display: flex;
+    flex-direction: column;
+}
 .gallery-right {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Persianas css */
@@ -737,28 +707,20 @@ footer>article p {
         grid-column: 3;
     }
     .gallery-left {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .gallery-left .art-cortinas {
-        padding-right: 20px;
-    }
-    .gallery-left .art-gallery {
-        justify-content: center;
-    }
-    .art-gallery {
-        grid-column: 2/3;
+        display: flex;
+        flex-direction: row;
     }
     .gallery-right {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: row-reverse;
     }
-    .gallery-right .art-cortinas {
-        padding-left: 20px;
-        grid-column: 2;
-        grid-row: 1;
+    .art-cortinas {
+        width: 50%;
     }
-    .gallery-right .art-gallery {
-        grid-column: 1;
-        grid-row: 1;
-        justify-content: center;
+    .art-gallery{
+        padding: 0 25px;
+    }
+    .gallerys{
+        grid-template-rows: repeat(2, 22vh);
     }
 }

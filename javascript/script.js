@@ -1,5 +1,6 @@
 window.onload = function () {
     this.getPage()
+    this.getImage()
 }
 
 // Menu function
@@ -53,6 +54,23 @@ function voltarTopo() {
 }
 
 // ********************Gallery function CORTINAS PAGE********************
+function getImage() {
+    const galleries = document.querySelectorAll('.gallerys')
+    console.log(galleries)
+    galleries.forEach(gallery => this.getNumberOfImages(gallery))
+}
+
+function getNumberOfImages(gallery) {
+    const linksImg = gallery.querySelectorAll('.gallery-item')
+    const linksLenght = linksImg.length
+    console.log(linksLenght)
+    this.setNumberOfImages(linksLenght, gallery)
+}
+function setNumberOfImages(images, gallery) {
+    const span = gallery.querySelector('.gallery-hidden-span')
+    span.innerHTML = `<h3>+${images}</h3>`
+}
+
 function galleryShow() {
     let scrollPosition = [
         self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
@@ -280,3 +298,49 @@ function exitGalleryToldotrans() {
     let gallery = document.getElementById('full-gallery-toltrans')
     gallery.style.left = "100%";
 }
+
+// Galleries JQuery
+$(document).ready(function() {
+    $('#fibraNatural').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#romana').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#celulares').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#tecido').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#rolos').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#translucidas').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+});
