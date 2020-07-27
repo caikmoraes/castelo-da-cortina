@@ -414,6 +414,11 @@ footer>article p {
 
 /* Cortinas css */
 /* Cortinas Gallery */
+.art-cortinas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .art-gallery {
     margin: auto;
 }
