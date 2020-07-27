@@ -300,6 +300,7 @@ function exitGalleryToldotrans() {
 }
 
 // Galleries JQuery
+// Pagina Cortinas
 $(document).ready(function() {
     $('#fibraNatural').magnificPopup({
         type: 'image',
@@ -315,4 +316,57 @@ $(document).ready(function() {
             enabled: true
         }
     });
+
+    // Pagina Persianas
+    $('#horAluminio').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    $('#horMadeira').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    $('#horPVC').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    $('#verPVC').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    $('#vTec').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    $('#rolDupla').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    //Pagina Toldos
+    
+
 });
