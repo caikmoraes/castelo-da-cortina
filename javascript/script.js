@@ -1,6 +1,5 @@
 window.onload = function () {
     this.getPage()
-    // this.setGallerysImages()
     this.getImage()
 }
 
@@ -55,7 +54,6 @@ function voltarTopo() {
 }
 
 // ********************Gallery function CORTINAS PAGE********************
-
 function getImage() {
     const galleries = document.querySelectorAll('.gallerys')
     galleries.forEach(gallery => this.getNumberOfImages(gallery))
@@ -112,6 +110,65 @@ $(document).ready(function() {
         }
     });
     $('#translucida').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    
+    // PERSIANAS
+    // Horizontal de Alumínio:
+    $('#horAluminio').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#horMadeira').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#horPvc').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#verticalPvc').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#verticalTecido').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#roloDupla').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#toldoTecido').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled: true
+        }
+    });
+    $('#toldoTransparente').magnificPopup({
         type: 'image',
         delegate: 'a',
         gallery: {
