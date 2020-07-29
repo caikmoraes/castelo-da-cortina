@@ -36,10 +36,10 @@ function getPage() {
         }
     })
 }
-function selectFunctions(currentUrl){
-    const pages =['cortinas', 'persianas', 'toldos']
+function selectFunctions(currentUrl) {
+    const pages = ['cortinas', 'persianas', 'toldos']
     pages.forEach(page => {
-        if(currentUrl.indexOf(`${page}.html`) != -1) {
+        if (currentUrl.indexOf(`${page}.html`) != -1) {
             this.getGalleries(currentUrl)
         }
     })
@@ -80,21 +80,36 @@ function setNumberOfImages(images, gallery) {
 }
 
 // ************TESTE******************
+
 function getJSON(url, callback) {
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-        let status = xhr.status;
-        // if (status === 200) {
-        //     console.log("Connection completed.\nStatus: " + status);
-        // } else {
-        //     console.log("Connection failed.\nStatus: " + status);
-        // }
-        callback(status, xhr.response)
-    }
-    xhr.send();
+    return new Promise(() => {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'json';
+        xhr.onload = function () {
+            let status = xhr.status;
+            // if (status === 200) {
+            //     console.log("Connection completed.\nStatus: " + status);
+            // } else {
+            //     console.log("Connection failed.\nStatus: " + status);
+            // }
+            callback(status, xhr.response)
+        }
+        xhr.send();
+    })
 }
+
+function setLoading() {
+    return new Promise(() => {
+        const gallerys = document.querySelectorAll('.gallerys')
+        let loading
+        gallerys.forEach(gallery => {
+            loading = `<img src="../img/loading.gif" class="loading" alt="Carregando...">`
+            gallery.innerHTML = loading
+        })
+    })
+}
+
 function getGalleries(currentUrl) {
     const url = currentUrl.split('pages/')[1]
     const galleries = document.querySelectorAll('.gallerys')
@@ -106,59 +121,62 @@ function getTypeOfImage(gallery, currentUrl) {
     let imagesUrl = `${BASE_URL}/img_${currentUrl.split('.')[0]}/${typeOfGallery}/`
     this.setGallerysImages(imagesUrl, gallery)
 }
-function setGallerysImages(imageUrl,gallery) {
-    getJSON(imageUrl, (status, data) => {
-        let newItem
-        for (let i = 0; i < data.length; i++){
-            if(i < 3) {
-                newItem = `
-                    <div class="gallery-item">
-                        <a href="${data[i].url}" target="_blanl" class="popup-link">
-                            <img src="${data[i].url}" alt="Imagem">
-                        </a>
-                    </div>
-                `
-                gallery.innerHTML += newItem
+function setGallerysImages(imageUrl, gallery) {
+    setLoading()
+        .then(getJSON(imageUrl, (status, data) => {
+            gallery.innerHTML = ''
+            let newItem
+            for (let i = 0; i < data.length; i++) {
+                if (i < 3) {
+                    newItem = `
+                        <div class="gallery-item">
+                            <a href="${data[i].url}" target="_blanl" class="popup-link">
+                                <img src="${data[i].url}" alt="Imagem">
+                            </a>
+                        </div>
+                    `
+                    gallery.innerHTML += newItem
+                }
+                else if (i == 3) {
+                    newItem = `
+                        <div class="gallery-item hidden firstHidden">
+                            <a href="${data[i].url}" target="_blanl" class="popup-link">
+                                <span class="gallery-hidden-span"></span>
+                                <img src="${data[i].url}" alt="Imagem">
+                            </a>
+                        </div>
+                    `
+                    gallery.innerHTML += newItem
+                }
+                else {
+                    newItem = `
+                        <div class="gallery-item hidden">
+                            <a href="${data[i].url}" target="_blanl" class="popup-link">
+                                <img src="${data[i].url}" alt="Imagem">
+                            </a>
+                        </div>
+                    `
+                    gallery.innerHTML += newItem
+                }
             }
-            else if(i == 3) {
-                newItem = `
-                    <div class="gallery-item hidden firstHidden">
-                        <a href="${data[i].url}" target="_blanl" class="popup-link">
-                            <span class="gallery-hidden-span"></span>
-                            <img src="${data[i].url}" alt="Imagem">
-                        </a>
-                    </div>
-                `
-                gallery.innerHTML += newItem
+            if (data.length > 4) {
+                this.getImage(gallery)
             }
-            else {
-                newItem = `
-                    <div class="gallery-item hidden">
-                        <a href="${data[i].url}" target="_blanl" class="popup-link">
-                            <img src="${data[i].url}" alt="Imagem">
-                        </a>
-                    </div>
-                `
-                gallery.innerHTML += newItem
-            }
-        }
-        if (data.length > 4) {
-            this.getImage(gallery)
-        }
-    })
+        }))
+    
 }
 
 $(document).ready(function () {
-    $(".gallerys").each(function (){
+    $(".gallerys").each(function () {
         $(this).magnificPopup({
             delegate: 'a',
             type: 'image',
             mainClass: 'mfp-with-zoom',
             zoom: {
-                enabled: true, 
+                enabled: true,
                 duration: 300,
-                easing: 'ease-in-out', 
-                opener: function(openerElement) {
+                easing: 'ease-in-out',
+                opener: function (openerElement) {
                     return openerElement.is('img') ? openerElement : openerElement.find('img');
                 }
             },

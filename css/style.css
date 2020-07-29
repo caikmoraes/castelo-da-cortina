@@ -519,8 +519,13 @@ footer>article p {
     flex-direction: column;
 }
 
-/* Persianas css */
-
+.loading {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
 /* **********RESPONSIVES ADJUSTS********** */
 
 @media screen and (max-width: 399px) {
