@@ -1,4 +1,4 @@
-const BASE_URL = 'https://caikmoraes.github.io/castelo-da-cortina/img/'
+const BASE_URL = 'https://teste-json-castelo.herokuapp.com/img'
 
 window.onload = function () {
     this.getPage()
@@ -98,7 +98,7 @@ function getTypeOfImage(gallery, currentUrl) {
     const typeOfGallery = gallery.id
     let imagesUrl
     let newItem
-    imagesUrl = `${BASE_URL}/img_${currentUrl.split('.')[0]}/${typeOfGallery}`
+    imagesUrl = `${BASE_URL}/img_${currentUrl.split('.')[0]}/${typeOfGallery}/`
     this.setGallerysImages(imagesUrl)
 }
 function setGallerysImages(imageUrl) {
