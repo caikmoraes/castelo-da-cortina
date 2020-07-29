@@ -1,9 +1,9 @@
 const BASE_URL = 'https://teste-json-castelo.herokuapp.com/img'
 
 window.onload = function () {
+    const url = window.location.href
     this.getPage()
-    this.getGalleries()
-    this.getImage()
+    this.selectFunctions(url)
 }
 
 // Menu function
@@ -36,6 +36,14 @@ function getPage() {
         }
     })
 }
+function selectFunctions(currentUrl){
+    const pages =['cortinas', 'persianas', 'toldos']
+    pages.forEach(page => {
+        if(currentUrl.indexOf(`${page}.html`) != -1) {
+            this.getGalleries(currentUrl)
+        }
+    })
+}
 
 //botao de voltar ao topo
 window.onscroll = function () {
@@ -56,10 +64,9 @@ function voltarTopo() {
     document.documentElement.scrollTop = 0;
 }
 
-// ********************Gallery function CORTINAS PAGE********************
-function getImage() {
-    const galleries = document.querySelectorAll('.gallerys')
-    galleries.forEach(gallery => this.getNumberOfImages(gallery))
+// ********************Gallery function********************
+function getImage(gallery) {
+    this.getNumberOfImages(gallery)
 }
 
 function getNumberOfImages(gallery) {
@@ -69,7 +76,7 @@ function getNumberOfImages(gallery) {
 }
 function setNumberOfImages(images, gallery) {
     const span = gallery.querySelector('.gallery-hidden-span')
-    span.innerHTML = `<h3>+${images - 4}</h3>`
+    span.innerHTML = `<h3>+${images - 3}</h3>`
 }
 
 // ************TESTE******************
@@ -88,27 +95,58 @@ function getJSON(url, callback) {
     }
     xhr.send();
 }
-function getGalleries() {
-    const url = window.location.href.split('pages/')[1]
+function getGalleries(currentUrl) {
+    const url = currentUrl.split('pages/')[1]
     const galleries = document.querySelectorAll('.gallerys')
     galleries.forEach(gallery => this.getTypeOfImage(gallery, url))
 }
 
 function getTypeOfImage(gallery, currentUrl) {
     const typeOfGallery = gallery.id
-    let imagesUrl
-    let newItem
-    imagesUrl = `${BASE_URL}/img_${currentUrl.split('.')[0]}/${typeOfGallery}/`
-    this.setGallerysImages(imagesUrl)
+    let imagesUrl = `${BASE_URL}/img_${currentUrl.split('.')[0]}/${typeOfGallery}/`
+    this.setGallerysImages(imagesUrl, gallery)
 }
-function setGallerysImages(imageUrl) {
+function setGallerysImages(imageUrl,gallery) {
     getJSON(imageUrl, (status, data) => {
-        console.log(status)
-        console.log("Data: ", data)
+        console.log(data)
+        let newItem
+        for (let i = 0; i < data.length; i++){
+            if(i < 3) {
+                newItem = `
+                    <div class="gallery-item">
+                        <a href="${data[i].url}" target="_blanl">
+                            <img src="${data[i].url}" alt="Imagem">
+                        </a>
+                    </div>
+                `
+                gallery.innerHTML += newItem
+            }
+            else if(i == 3) {
+                newItem = `
+                    <div class="gallery-item hidden firstHidden">
+                        <a href="${data[i].url}" target="_blanl">
+                            <span class="gallery-hidden-span"></span>
+                            <img src="${data[i].url}" alt="Imagem">
+                        </a>
+                    </div>
+                `
+                gallery.innerHTML += newItem
+            }
+            else {
+                newItem = `
+                    <div class="gallery-item hidden">
+                        <a href="${data[i].url}" target="_blanl">
+                            <img src="${data[i].url}" alt="Imagem">
+                        </a>
+                    </div>
+                `
+                gallery.innerHTML += newItem
+            }
+        }
+        this.getImage(gallery)
     })
 }
 
-// Galleries JQuery
 $(document).ready(function () {
     $('#fibraNatural').magnificPopup({
         type: 'image',
