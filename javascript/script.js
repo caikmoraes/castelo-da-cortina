@@ -1,5 +1,6 @@
 window.onload = function () {
     this.getPage()
+    this.getGalleries()
     this.getImage()
 }
 
@@ -69,8 +70,52 @@ function setNumberOfImages(images, gallery) {
     span.innerHTML = `<h3>+${images - 4}</h3>`
 }
 
+// ************TESTE******************
+function getGalleries(){
+    const url = window.location.href.split('pages/')[1]
+    const galleries = document.querySelectorAll('.gallerys')
+    galleries.forEach(gallery => this.getTypeOfImage(gallery, url))
+}
 
-
+function getTypeOfImage(gallery, currentUrl) {
+    const typeOfGallery = gallery.id
+    let imageUrl
+    let newItem
+    for (let i = 1; i <= 8; i++){
+        imageUrl = `../img/img_${currentUrl.split('.')[0]}/${typeOfGallery}/${typeOfGallery}${i}.jpeg`
+        if (i < 4) {
+            newItem = `
+                <div class="gallery-item">
+                    <a href="${imageUrl}">
+                        <img src="${imageUrl}" alt="Teste">
+                    </a>
+                </div>
+            `
+            gallery.innerHTML += newItem
+        }
+        else if (i == 4) {
+            newItem = `
+                <div class="gallery-item hidden firstHidden">
+                    <a href="${imageUrl}">
+                        <span class="gallery-hidden-span"></span>
+                        <img src="${imageUrl}" alt="Teste">
+                    </a>
+                </div>
+            `
+            gallery.innerHTML += newItem
+        }
+        else {
+            newItem = `
+                <div class="gallery-item hidden">
+                    <a href="${imageUrl}">
+                        <img src="${imageUrl}" alt="Teste">
+                    </a>
+                </div>
+            `
+            gallery.innerHTML += newItem
+        }
+    }
+}
 
 // Galleries JQuery
 $(document).ready(function() {
