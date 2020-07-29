@@ -86,11 +86,11 @@ function getJSON(url, callback) {
     xhr.responseType = 'json';
     xhr.onload = function() {
         let status = xhr.status;
-        if (status === 200) {
-            console.log("Connection completed.\nStatus: " + status);
-        } else {
-            console.log("Connection failed.\nStatus: " + status);
-        }
+        // if (status === 200) {
+        //     console.log("Connection completed.\nStatus: " + status);
+        // } else {
+        //     console.log("Connection failed.\nStatus: " + status);
+        // }
         callback(status, xhr.response)
     }
     xhr.send();
@@ -108,13 +108,12 @@ function getTypeOfImage(gallery, currentUrl) {
 }
 function setGallerysImages(imageUrl,gallery) {
     getJSON(imageUrl, (status, data) => {
-        console.log(data)
         let newItem
         for (let i = 0; i < data.length; i++){
             if(i < 3) {
                 newItem = `
                     <div class="gallery-item">
-                        <a href="${data[i].url}" target="_blanl">
+                        <a href="${data[i].url}" target="_blanl" class="popup-link">
                             <img src="${data[i].url}" alt="Imagem">
                         </a>
                     </div>
@@ -124,7 +123,7 @@ function setGallerysImages(imageUrl,gallery) {
             else if(i == 3) {
                 newItem = `
                     <div class="gallery-item hidden firstHidden">
-                        <a href="${data[i].url}" target="_blanl">
+                        <a href="${data[i].url}" target="_blanl" class="popup-link">
                             <span class="gallery-hidden-span"></span>
                             <img src="${data[i].url}" alt="Imagem">
                         </a>
@@ -135,7 +134,7 @@ function setGallerysImages(imageUrl,gallery) {
             else {
                 newItem = `
                     <div class="gallery-item hidden">
-                        <a href="${data[i].url}" target="_blanl">
+                        <a href="${data[i].url}" target="_blanl" class="popup-link">
                             <img src="${data[i].url}" alt="Imagem">
                         </a>
                     </div>
@@ -143,110 +142,31 @@ function setGallerysImages(imageUrl,gallery) {
                 gallery.innerHTML += newItem
             }
         }
-        this.getImage(gallery)
+        if (data.length > 4) {
+            this.getImage(gallery)
+        }
     })
 }
 
 $(document).ready(function () {
-    $('#fibraNatural').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#romana').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#celulares').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#tecidos').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#rolos').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#translucida').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-
-    // PERSIANAS
-    // Horizontal de Alumínio:
-    $('#horAluminio').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#horMadeira').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#horPvc').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#verticalPvc').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#verticalTecido').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#roloDupla').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#toldoTecido').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#toldoTransparente').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
+    $(".gallerys").each(function (){
+        $(this).magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            mainClass: 'mfp-with-zoom',
+            zoom: {
+                enabled: true, 
+                duration: 300,
+                easing: 'ease-in-out', 
+                opener: function(openerElement) {
+                    return openerElement.is('img') ? openerElement : openerElement.find('img');
+                }
+            },
+            gallery: {
+                enabled: true,
+                tPrev: 'Anterior',
+                tNext: 'Próximo',
+            },
+        })
+    })
 });

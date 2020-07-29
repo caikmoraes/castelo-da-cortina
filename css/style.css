@@ -480,46 +480,6 @@ footer>article p {
     align-items: center;
     bottom: 0px;
 }
-/* Persianas Gallery */
-
-#full-gallery-hal {
-    left: -100vw;
-    transition: all .3s ease-out;
-}
-
-.exit-gallery {
-    width: 95vw;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.exit-gallery>button {
-    outline: none;
-    border: none;
-    background: transparent;
-    color: white;
-    display: block;
-}
-
-.gallery-carousel {
-    padding: 30px;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.gallery-on-page .carousel {
-    overflow: hidden;
-    max-width: 700px;
-    max-height: 394px;
-}
-
-.gallery-on-page .carousel-item img {
-    max-width: 700px;
-    max-height: 394px;
-}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -560,48 +520,6 @@ footer>article p {
 }
 
 /* Persianas css */
-
-#full-gallery-hal {
-    left: -100vw;
-    transition: all .3s ease-out;
-}
-
-#full-gallery-hmad {
-    left: -100vw;
-    transition: all .3s ease-out;
-}
-
-#full-gallery-hpvc {
-    left: -100vw;
-    transition: all .3s ease-out;
-}
-
-#full-gallery-vpvc {
-    left: -100vw;
-    transition: all .3s ease-out;
-}
-
-#full-gallery-vtec {
-    left: -100vw;
-    transition: all .3s ease-out;
-}
-
-#full-gallery-prod {
-    left: -100vw;
-    transition: all .3s ease-out;
-}
-
-/* Toldos css */
-
-#full-gallery-toltec {
-    left: -100vw;
-    transition: all .3s ease-out;
-}
-
-#full-gallery-toltrans {
-    left: -100vw;
-    transition: all .3s ease-out;
-}
 
 /* **********RESPONSIVES ADJUSTS********** */
 
