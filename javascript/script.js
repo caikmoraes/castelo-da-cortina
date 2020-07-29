@@ -1,3 +1,5 @@
+const BASE_URL = 'https://caikmoraes.github.io/castelo-da-cortina/img/'
+
 window.onload = function () {
     this.getPage()
     this.getGalleries()
@@ -5,8 +7,8 @@ window.onload = function () {
 }
 
 // Menu function
-$(function() {
-    $(".toggle").on("click", function() {
+$(function () {
+    $(".toggle").on("click", function () {
         if ($(".item").hasClass("active")) {
             $(".item").removeClass("active")
         } else {
@@ -36,7 +38,7 @@ function getPage() {
 }
 
 //botao de voltar ao topo
-window.onscroll = function() {
+window.onscroll = function () {
     scroll();
 }
 
@@ -71,7 +73,22 @@ function setNumberOfImages(images, gallery) {
 }
 
 // ************TESTE******************
-function getGalleries(){
+function getJSON(url, callback) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+        let status = xhr.status;
+        if (status === 200) {
+            console.log("Connection completed.\nStatus: " + status);
+        } else {
+            console.log("Connection failed.\nStatus: " + status);
+        }
+        callback(status, xhr.response)
+    }
+    xhr.send();
+}
+function getGalleries() {
     const url = window.location.href.split('pages/')[1]
     const galleries = document.querySelectorAll('.gallerys')
     galleries.forEach(gallery => this.getTypeOfImage(gallery, url))
@@ -79,46 +96,20 @@ function getGalleries(){
 
 function getTypeOfImage(gallery, currentUrl) {
     const typeOfGallery = gallery.id
-    let imageUrl
+    let imagesUrl
     let newItem
-    for (let i = 1; i <= 8; i++){
-        imageUrl = `../img/img_${currentUrl.split('.')[0]}/${typeOfGallery}/${typeOfGallery}${i}.jpeg`
-        if (i < 4) {
-            newItem = `
-                <div class="gallery-item">
-                    <a href="${imageUrl}">
-                        <img src="${imageUrl}" alt="Teste">
-                    </a>
-                </div>
-            `
-            gallery.innerHTML += newItem
-        }
-        else if (i == 4) {
-            newItem = `
-                <div class="gallery-item hidden firstHidden">
-                    <a href="${imageUrl}">
-                        <span class="gallery-hidden-span"></span>
-                        <img src="${imageUrl}" alt="Teste">
-                    </a>
-                </div>
-            `
-            gallery.innerHTML += newItem
-        }
-        else {
-            newItem = `
-                <div class="gallery-item hidden">
-                    <a href="${imageUrl}">
-                        <img src="${imageUrl}" alt="Teste">
-                    </a>
-                </div>
-            `
-            gallery.innerHTML += newItem
-        }
-    }
+    imagesUrl = `${BASE_URL}/img_${currentUrl.split('.')[0]}/${typeOfGallery}`
+    this.setGallerysImages(imagesUrl)
+}
+function setGallerysImages(imageUrl) {
+    getJSON(imageUrl, (status, data) => {
+        console.log(status)
+        console.log("Data: ", data)
+    })
 }
 
 // Galleries JQuery
-$(document).ready(function() {
+$(document).ready(function () {
     $('#fibraNatural').magnificPopup({
         type: 'image',
         delegate: 'a',
@@ -161,7 +152,7 @@ $(document).ready(function() {
             enabled: true
         }
     });
-    
+
     // PERSIANAS
     // Horizontal de Alumínio:
     $('#horAluminio').magnificPopup({
