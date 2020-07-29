@@ -1,9 +1,9 @@
-const BASE_URL = 'https://caikmoraes.github.io/castelo-da-cortina/img/'
+const BASE_URL = 'https://teste-json-castelo.herokuapp.com/img'
 
 window.onload = function () {
+    const url = window.location.href
     this.getPage()
-    this.getGalleries()
-    this.getImage()
+    this.selectFunctions(url)
 }
 
 // Menu function
@@ -36,6 +36,14 @@ function getPage() {
         }
     })
 }
+function selectFunctions(currentUrl) {
+    const pages = ['cortinas', 'persianas', 'toldos']
+    pages.forEach(page => {
+        if (currentUrl.indexOf(`${page}.html`) != -1) {
+            this.getGalleries(currentUrl)
+        }
+    })
+}
 
 //botao de voltar ao topo
 window.onscroll = function () {
@@ -56,10 +64,9 @@ function voltarTopo() {
     document.documentElement.scrollTop = 0;
 }
 
-// ********************Gallery function CORTINAS PAGE********************
-function getImage() {
-    const galleries = document.querySelectorAll('.gallerys')
-    galleries.forEach(gallery => this.getNumberOfImages(gallery))
+// ********************Gallery function********************
+function getImage(gallery) {
+    this.getNumberOfImages(gallery)
 }
 
 function getNumberOfImages(gallery) {
@@ -69,146 +76,115 @@ function getNumberOfImages(gallery) {
 }
 function setNumberOfImages(images, gallery) {
     const span = gallery.querySelector('.gallery-hidden-span')
-    span.innerHTML = `<h3>+${images - 4}</h3>`
+    span.innerHTML = `<h3>+${images - 3}</h3>`
 }
 
 // ************TESTE******************
+
 function getJSON(url, callback) {
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-        let status = xhr.status;
-        if (status === 200) {
-            console.log("Connection completed.\nStatus: " + status);
-        } else {
-            console.log("Connection failed.\nStatus: " + status);
+    return new Promise(() => {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'json';
+        xhr.onload = function () {
+            let status = xhr.status;
+            // if (status === 200) {
+            //     console.log("Connection completed.\nStatus: " + status);
+            // } else {
+            //     console.log("Connection failed.\nStatus: " + status);
+            // }
+            callback(status, xhr.response)
         }
-        callback(status, xhr.response)
-    }
-    xhr.send();
+        xhr.send();
+    })
 }
-function getGalleries() {
-    const url = window.location.href.split('pages/')[1]
+
+function setLoading() {
+    return new Promise(() => {
+        const gallerys = document.querySelectorAll('.gallerys')
+        let loading
+        gallerys.forEach(gallery => {
+            loading = `<img src="../img/loading.gif" class="loading" alt="Carregando...">`
+            gallery.innerHTML = loading
+        })
+    })
+}
+
+function getGalleries(currentUrl) {
+    const url = currentUrl.split('pages/')[1]
     const galleries = document.querySelectorAll('.gallerys')
     galleries.forEach(gallery => this.getTypeOfImage(gallery, url))
 }
 
 function getTypeOfImage(gallery, currentUrl) {
     const typeOfGallery = gallery.id
-    let imagesUrl
-    let newItem
-    imagesUrl = `${BASE_URL}/img_${currentUrl.split('.')[0]}/${typeOfGallery}`
-    this.setGallerysImages(imagesUrl)
+    let imagesUrl = `${BASE_URL}/img_${currentUrl.split('.')[0]}/${typeOfGallery}/`
+    this.setGallerysImages(imagesUrl, gallery)
 }
-function setGallerysImages(imageUrl) {
-    getJSON(imageUrl, (status, data) => {
-        console.log(status)
-        console.log("Data: ", data)
-    })
+function setGallerysImages(imageUrl, gallery) {
+    setLoading()
+        .then(getJSON(imageUrl, (status, data) => {
+            gallery.innerHTML = ''
+            let newItem
+            for (let i = 0; i < data.length; i++) {
+                if (i < 3) {
+                    newItem = `
+                        <div class="gallery-item">
+                            <a href="${data[i].url}" target="_blanl" class="popup-link">
+                                <img src="${data[i].url}" alt="Imagem">
+                            </a>
+                        </div>
+                    `
+                    gallery.innerHTML += newItem
+                }
+                else if (i == 3) {
+                    newItem = `
+                        <div class="gallery-item hidden firstHidden">
+                            <a href="${data[i].url}" target="_blanl" class="popup-link">
+                                <span class="gallery-hidden-span"></span>
+                                <img src="${data[i].url}" alt="Imagem">
+                            </a>
+                        </div>
+                    `
+                    gallery.innerHTML += newItem
+                }
+                else {
+                    newItem = `
+                        <div class="gallery-item hidden">
+                            <a href="${data[i].url}" target="_blanl" class="popup-link">
+                                <img src="${data[i].url}" alt="Imagem">
+                            </a>
+                        </div>
+                    `
+                    gallery.innerHTML += newItem
+                }
+            }
+            if (data.length > 4) {
+                this.getImage(gallery)
+            }
+        }))
+    
 }
 
-// Galleries JQuery
 $(document).ready(function () {
-    $('#fibraNatural').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#romana').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#celulares').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#tecidos').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#rolos').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#translucida').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-
-    // PERSIANAS
-    // Horizontal de Alumínio:
-    $('#horAluminio').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#horMadeira').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#horPvc').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#verticalPvc').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#verticalTecido').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#roloDupla').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#toldoTecido').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
-    $('#toldoTransparente').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        }
-    });
+    $(".gallerys").each(function () {
+        $(this).magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            mainClass: 'mfp-with-zoom',
+            zoom: {
+                enabled: true,
+                duration: 300,
+                easing: 'ease-in-out',
+                opener: function (openerElement) {
+                    return openerElement.is('img') ? openerElement : openerElement.find('img');
+                }
+            },
+            gallery: {
+                enabled: true,
+                tPrev: 'Anterior',
+                tNext: 'Próximo',
+            },
+        })
+    })
 });
