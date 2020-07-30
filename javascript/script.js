@@ -1,9 +1,8 @@
 const BASE_URL = 'https://castelo-da-cortina.herokuapp.com/img'
 
 window.onload = function () {
-    const url = window.location.href
     this.getPage()
-    this.selectFunctions(url)
+    this.selectFunctions(window.location.href)
 }
 
 // Menu function
