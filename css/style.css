@@ -660,6 +660,6 @@ footer>article p {
     }
     .gallerys{
         grid-template-rows: repeat(2, 150px);
-        max-width: 35vw;
+        max-width: 500px;
     }
 }
