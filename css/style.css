@@ -468,6 +468,7 @@ footer>article p {
     position: relative;
 }
 .gallerys .gallery-item.hidden.firstHidden .gallery-hidden-span {
+    box-sizing: border-box;
     position: absolute;
     width: 100%;
     height: 100%;
