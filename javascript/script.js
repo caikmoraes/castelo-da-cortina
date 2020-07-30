@@ -1,4 +1,4 @@
-const BASE_URL = 'https://teste-json-castelo.herokuapp.com/img'
+const BASE_URL = 'https://castelo-da-cortina.herokuapp.com/img'
 
 window.onload = function () {
     const url = window.location.href
