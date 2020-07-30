@@ -175,7 +175,8 @@ function setGallerysImages(imageUrl, gallery) {
             else if(data.length == 3){
                 this.changeGalleryItem(gallery)
             }
-        }))
+        })
+    )
 }
 
 function changeGalleryItem(gallery) {
