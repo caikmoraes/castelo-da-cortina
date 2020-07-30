@@ -546,6 +546,9 @@ footer>article p {
     .artLogo a h3 {
         text-align: center;
     }
+    .art-cortinas > h2 {
+        font-size: 23pt;
+    }
 }
 
 
@@ -585,6 +588,7 @@ footer>article p {
     #cortinas {
         padding-bottom: 15px;
     }
+    
 }
 
 
@@ -648,6 +652,7 @@ footer>article p {
         padding: 0 25px;
     }
     .gallerys{
-        grid-template-rows: repeat(2, 22vh);
+        grid-template-rows: repeat(2, 150px);
+        max-width: 35vw;
     }
 }
