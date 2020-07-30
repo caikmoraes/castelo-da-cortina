@@ -553,6 +553,7 @@ footer>article p {
 @media screen and (max-width: 619px) {
     .gallerys{
         grid-template-rows: repeat(2, 13vh);
+        max-width: 60vw;
     }
 }
 
@@ -593,7 +594,7 @@ footer>article p {
         padding-bottom: 15px;
     }
     .gallerys{
-        grid-template-rows: repeat(2, 150px);
+        grid-template-rows: repeat(2, 140px);
         max-width: 50vw;
     }
 }
