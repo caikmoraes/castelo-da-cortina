@@ -137,7 +137,17 @@ function setGallerysImages(imageUrl, gallery) {
                     `
                     gallery.innerHTML += newItem
                 }
-                else if (i == 3) {
+                else if(i == 3 && data.length == 4) {
+                    newItem = `
+                        <div class="gallery-item hidden firstHidden">
+                            <a href="${data[i].url}" target="_blanl" class="popup-link">
+                                <img src="${data[i].url}" alt="Imagem">
+                            </a>
+                        </div>
+                    `
+                    gallery.innerHTML += newItem
+                }
+                else if (i == 3 && data.length > 4) {
                     newItem = `
                         <div class="gallery-item hidden firstHidden">
                             <a href="${data[i].url}" target="_blanl" class="popup-link">
@@ -148,6 +158,7 @@ function setGallerysImages(imageUrl, gallery) {
                     `
                     gallery.innerHTML += newItem
                 }
+                
                 else {
                     newItem = `
                         <div class="gallery-item hidden">
@@ -162,8 +173,18 @@ function setGallerysImages(imageUrl, gallery) {
             if (data.length > 4) {
                 this.getImage(gallery)
             }
+            else if(data.length == 3){
+                this.changeGalleryItem(gallery)
+            }
         }))
-    
+}
+
+function changeGalleryItem(gallery) {
+    const items = gallery.querySelectorAll('.gallery-item')
+    $(items[2]).css("grid-column", "1/3")
+    $(items[2]).css("width", "50%")
+    $(items[2]).css("height", "100%")
+    $(items[2]).css("margin", "auto")
 }
 
 $(document).ready(function () {
