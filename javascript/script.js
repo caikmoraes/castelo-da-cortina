@@ -1,12 +1,36 @@
 const BASE_URL = 'https://castelo-da-cortina.herokuapp.com/img'
 
 window.onload = function () {
+    this.setMenu()
     this.setFooter()
     this.getPage()
     this.selectFunctions(window.location.href)
 }
 
 // Menu function
+function setMenu() {
+    const nav = document.querySelector('nav')
+    const menu = `
+        <ul class="menu">
+            <li class="logo">
+                <article class="artLogo">
+                    <a href="index.html"><img src="img/logo-peq.png" alt="Logo empresa">
+                        <h3>Cortinas e Persianas</h3>
+                    </a>
+                </article>
+            </li>
+            <li class="item"><a class="menu-link" href="cortinas.html" id="cortinas">Cortinas</a></li>
+            <li class="item"><a class="menu-link" href="persianas.html" id="persianas">Persianas</a></li>
+            <li class="item"><a class="menu-link" href="toldos.html" id="toldos">Toldos</a></li>
+            <li class="item button"><a class="menu-link" href="contato.html" id="contato">Contato</a></li>
+            <li class="toggle">
+                <label class="bars" id="open-menu" onclick="openMenu()">&#9776;</label>
+                <label class="bars" id="exit-menu" onclick="exitMenu()">&#88;</label>
+            </li>
+        </ul>
+    `
+    nav.innerHTML = menu
+}
 $(function () {
     $(".toggle").on("click", function () {
         if ($(".item").hasClass("active")) {
@@ -40,7 +64,7 @@ function selectFunctions(currentUrl) {
     const pages = ['cortinas', 'persianas', 'toldos']
     pages.forEach(page => {
         if (currentUrl.indexOf(`${page}.html`) != -1) {
-            this.getGalleries(currentUrl)
+            this.getGalleries(`${page}.html`)
         }
     })
 }
@@ -127,7 +151,7 @@ function setLoading() {
 }
 
 function getGalleries(currentUrl) {
-    const url = currentUrl.split('pages/')[1]
+    const url = currentUrl
     const galleries = document.querySelectorAll('.gallerys')
     galleries.forEach(gallery => this.getTypeOfImage(gallery, url))
 }
@@ -153,7 +177,7 @@ function setGallerysImages(imageUrl, gallery) {
                     `
                     gallery.innerHTML += newItem
                 }
-                else if(i == 3 && data.length == 4) {
+                else if (i == 3 && data.length == 4) {
                     newItem = `
                         <div class="gallery-item hidden firstHidden">
                             <a href="${data[i].url}" target="_blanl" class="popup-link">
@@ -174,7 +198,7 @@ function setGallerysImages(imageUrl, gallery) {
                     `
                     gallery.innerHTML += newItem
                 }
-                
+
                 else {
                     newItem = `
                         <div class="gallery-item hidden">
@@ -189,11 +213,11 @@ function setGallerysImages(imageUrl, gallery) {
             if (data.length > 4) {
                 this.getImage(gallery)
             }
-            else if(data.length == 3){
+            else if (data.length == 3) {
                 this.changeGalleryItem(gallery)
             }
         })
-    )
+        )
 }
 
 function changeGalleryItem(gallery) {
