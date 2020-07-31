@@ -226,12 +226,11 @@ footer {
     background-color: var(--footerColor);
     padding: 30px;
     color: white;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
+    justify-content: center;
 }
 
 footer>article {
-    grid-column: 4/10;
     text-align: center;
 }
 
@@ -247,7 +246,7 @@ footer>article p {
     margin: 0 1em;
 }
 .social li a i{
-    font-size: 25pt;
+    font-size: 23pt;
     color: white;
 }
 

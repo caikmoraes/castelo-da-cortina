@@ -1,6 +1,7 @@
 const BASE_URL = 'https://castelo-da-cortina.herokuapp.com/img'
 
 window.onload = function () {
+    this.setFooter()
     this.getPage()
     this.selectFunctions(window.location.href)
 }
@@ -41,6 +42,22 @@ function selectFunctions(currentUrl) {
         if (currentUrl.indexOf(`${page}.html`) != -1) {
             this.getGalleries(currentUrl)
         }
+    })
+}
+// Footer function
+function setFooter() {
+    const footers = document.querySelectorAll('footer')
+    const footerElements = `
+        <article>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/casteloda.cortina" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://www.instagram.com/castelodacortina" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://g.page/castelo-da-cortina?gm" target="_blank"><i class="fab fa-google"></i></a></li>
+            </ul>
+            <p>&copy; 2020 Castelo da Cortina. Todos os direitos reservados.</p>
+        </article>`
+    footers.forEach(footer => {
+        footer.innerHTML = footerElements
     })
 }
 
@@ -186,7 +203,9 @@ function changeGalleryItem(gallery) {
     $(items[2]).css("height", "100%")
     $(items[2]).css("margin", "auto")
 }
-
+$('.carousel').carousel({
+    touch: true // default
+})
 $(document).ready(function () {
     $(".gallerys").each(function () {
         $(this).magnificPopup({
