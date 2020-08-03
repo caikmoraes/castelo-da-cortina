@@ -1,36 +1,13 @@
 const BASE_URL = 'https://castelo-da-cortina.herokuapp.com/img'
 
 window.onload = function () {
-    this.setMenu()
     this.setFooter()
     this.getPage()
     this.selectFunctions(window.location.href)
 }
 
 // Menu function
-function setMenu() {
-    const nav = document.querySelector('nav')
-    const menu = `
-        <ul class="menu">
-            <li class="logo">
-                <article class="artLogo">
-                    <a href="index.html"><img src="img/logo-peq.png" alt="Logo empresa">
-                        <h3>Cortinas e Persianas</h3>
-                    </a>
-                </article>
-            </li>
-            <li class="item"><a class="menu-link" href="cortinas.html" id="cortinas">Cortinas</a></li>
-            <li class="item"><a class="menu-link" href="persianas.html" id="persianas">Persianas</a></li>
-            <li class="item"><a class="menu-link" href="toldos.html" id="toldos">Toldos</a></li>
-            <li class="item button"><a class="menu-link" href="contato.html" id="contato">Contato</a></li>
-            <li class="toggle">
-                <label class="bars" id="open-menu" onclick="openMenu()">&#9776;</label>
-                <label class="bars" id="exit-menu" onclick="exitMenu()">&#88;</label>
-            </li>
-        </ul>
-    `
-    nav.innerHTML = menu
-}
+
 $(function () {
     $(".toggle").on("click", function () {
         if ($(".item").hasClass("active")) {
