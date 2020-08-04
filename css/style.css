@@ -131,17 +131,20 @@ nav {
     text-decoration: none;
 }
 
-.artLogo a h3 {
+.artLogo a {
     display: flex;
-    align-items: center;
-    width: 40vw;
-    max-height: 80px;
-    min-width: 154px;
-    max-width: 309px;
-    display: flex;
+    justify-content: center;
     align-items: center;
 }
-
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title .zelito{
+    font-size: 20px;
+}
 .logo {
     margin: 0 10px;
 }
@@ -202,7 +205,7 @@ nav img {
 .toggle {
     cursor: pointer;
     order: 1;
-    margin: 0 15px;
+    margin: 0 20px;
     text-align: center;
 }
 
@@ -549,6 +552,16 @@ footer>article p {
         text-align: center;
     }
 }
+@media screen and (max-width: 538px) {
+    .artLogo a {
+        width: 95vw;
+        justify-content: center;
+    }
+    .toggle {
+        width: 100%;
+        text-align: center;
+    }
+}
 @media screen and (max-width: 619px) {
     .gallerys{
         grid-template-rows: repeat(2, 13vh);
@@ -560,10 +573,8 @@ footer>article p {
         grid-template-rows: repeat(2, 140px);
     }
 }
-@media screen and (width: 600px) and (height: 450){
 
-}
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 639px) {
     .menu {
         justify-content: center;
     }
@@ -606,7 +617,7 @@ footer>article p {
 
 /* Tablets grandes e Notebooks +*/
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 968px) {
     nav {
         padding: 0 15px;
     }
