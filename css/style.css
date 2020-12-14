@@ -249,6 +249,7 @@ footer>article p {
     margin: 0 1em;
 }
 .social li a i{
+    overflow: hidden;
     font-size: 23pt;
     color: white;
 }
