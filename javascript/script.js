@@ -48,6 +48,7 @@ function selectFunctions(currentUrl) {
 // Footer function
 function setFooter() {
     const footers = document.querySelectorAll('footer')
+    let current_year = new Date().getFullYear()
     const footerElements = `
         <article>
             <ul class="social">
@@ -55,7 +56,7 @@ function setFooter() {
                 <li><a href="https://www.instagram.com/castelodacortina" target="_blank"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="https://g.page/castelo-da-cortina?gm" target="_blank"><i class="fab fa-google"></i></a></li>
             </ul>
-            <p>&copy; 2020 Castelo da Cortina. Todos os direitos reservados.</p>
+            <p>&copy; ${current_year} Castelo da Cortina. Todos os direitos reservados.</p>
         </article>`
     footers.forEach(footer => {
         footer.innerHTML = footerElements
