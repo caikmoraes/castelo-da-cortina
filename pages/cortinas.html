@@ -1,166 +1,237 @@
 <!DOCTYPE html>
 <html lang="pt-br" id="page">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Caik de Moraes Souza - caikdemoraes@gmail.com">
-    <meta name="author" content="Thiago Rodrigues - thiagof1212@gmail.com">
-    <script src="https://kit.fontawesome.com/883e8bb361.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" />
-    <link rel="shortcut icon" href="../img/logo-peq.png" sizes="32x32" type="image/png">
-    <link rel="stylesheet" href="../css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Caik de Moraes Souza - caikdemoraes@gmail.com"
+    />
+    <meta name="author" content="Thiago Rodrigues - thiagof1212@gmail.com" />
+    <script
+      src="https://kit.fontawesome.com/883e8bb361.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+      integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/logo-peq.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
     <script src="../javascript/script.js"></script>
     <title>Castelo da Cortina - Cortinas</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav>
-        <ul class="menu">
-            <li class="logo">
-                <article class="artLogo">
-                    <a href="/">
-                        <img src="../img/logo-peq.png" alt="Logo empresa">
-                        <div class="title">
-                            <h3 class="zelito">Zelito das Cortinas</h3>
-                            <h3>Cortinas e Persianas</h3>
-                        </div>
-                    </a>
-                </article>
-            </li>
-            <li class="item"><a class="menu-link" href="cortinas.html" id="cortinas">Cortinas</a></li>
-            <li class="item"><a class="menu-link" href="persianas.html" id="persianas">Persianas</a></li>
-            <li class="item"><a class="menu-link" href="toldos.html" id="toldos">Toldos</a></li>
-            <li class="item button"><a class="menu-link" href="contato.html" id="contato">Contato</a></li>
-            <li class="toggle">
-                <label class="bars" id="open-menu" onclick="openMenu()"><i class="fas fa-bars"></i></label>
-                <label class="bars" id="exit-menu" onclick="exitMenu()"><i class="fas fa-times"></i></label>
-            </li>
-        </ul>
+      <ul class="menu">
+        <li class="logo">
+          <article class="artLogo">
+            <a href="/">
+              <img src="../img/logo-peq.png" alt="Logo empresa" />
+              <div class="title">
+                <h3 class="zelito">Zelito das Cortinas</h3>
+                <h3>Cortinas e Persianas</h3>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li class="item">
+          <a class="menu-link" href="cortinas.html" id="cortinas">Cortinas</a>
+        </li>
+        <li class="item">
+          <a class="menu-link" href="persianas.html" id="persianas"
+            >Persianas</a
+          >
+        </li>
+        <li class="item">
+          <a class="menu-link" href="toldos.html" id="toldos">Toldos</a>
+        </li>
+        <li class="item button">
+          <a class="menu-link" href="contato.html" id="contato">Contato</a>
+        </li>
+        <li class="toggle">
+          <label class="bars" id="open-menu" onclick="openMenu()"
+            ><i class="fas fa-bars"></i
+          ></label>
+          <label class="bars" id="exit-menu" onclick="exitMenu()"
+            ><i class="fas fa-times"></i
+          ></label>
+        </li>
+      </ul>
     </nav>
     <div class="separator-menu"></div>
     <section class="sect-content">
-        <article class="art-title">
-            <h1>Tipos de cortinas</h1>
-            <div class="underline-titles"></div>
-        </article>
-        <article class="cortina-content">
-            <p>
-                Trabalhamos com diversos tipos de cortinas, dentre eles cortinas de fibra natural, romanas, de tecidos, rolos, de teto e translúcida. Sempre visando uma ampla lista de opções para o cliente. Assim, podemos deixar seu lar ou ambiente de trabalho muito
-                mais bonito, moderno e sofisticado.
-            </p>
-        </article>
+      <article class="art-title">
+        <h1>Tipos de cortinas</h1>
+        <div class="underline-titles"></div>
+      </article>
+      <article class="cortina-content">
+        <p>
+          Trabalhamos com diversos tipos de cortinas, dentre eles cortinas de
+          fibra natural, romanas, de tecidos, rolos, de teto e translúcida.
+          Sempre visando uma ampla lista de opções para o cliente. Assim,
+          podemos deixar seu lar ou ambiente de trabalho muito mais bonito,
+          moderno e sofisticado.
+        </p>
+      </article>
     </section>
     <section class="sect-content gallery-left">
-        <article class="art-cortinas">
-            <h2>Fibra Natural</h2>
-            <div class="underline-titles"></div>
-            <p>
-                Trazendo um pouco da natureza para seu ambiente numa mistura de elegância e sofisticação, nossas fibras são selecionadas e tratadas, tornando-se matéria-prima da mais alta qualidade na confecção de cortinas. Podendo ser feitas em fibras como: palha de
-                seda, buriti, pele de bambú, entre outras.
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="fibraNatural" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+      <article class="art-cortinas">
+        <h2>Fibra Natural</h2>
+        <div class="underline-titles"></div>
+        <p>
+          Trazendo um pouco da natureza para seu ambiente numa mistura de
+          elegância e sofisticação, nossas fibras são selecionadas e tratadas,
+          tornando-se matéria-prima da mais alta qualidade na confecção de
+          cortinas. Podendo ser feitas em fibras como: palha de seda, buriti,
+          pele de bambú, entre outras.
+        </p>
+      </article>
+      <div class="art-gallery">
+        <div id="fibraNatural" class="gallerys">
+          <!-- Inserted from JS -->
         </div>
+      </div>
     </section>
     <section class="sect-content gallery-right">
-        <article class="art-cortinas">
-            <h2>Romana</h2>
-            <div class="underline-titles"></div>
-            <p>
-                Modernas e arrojadas, com estilo de funcionamento diferenciado proporcionam movimentos elegantes e sofisticados. A linha cortina romana, oferece versatilidade e elegância cominhas retas e variadas, opções de tecidos e cores combinam personalidade e bom
-                gosto.
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="romana" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+      <article class="art-cortinas">
+        <h2>Romana</h2>
+        <div class="underline-titles"></div>
+        <p>
+          Modernas e arrojadas, com estilo de funcionamento diferenciado
+          proporcionam movimentos elegantes e sofisticados. A linha cortina
+          romana, oferece versatilidade e elegância cominhas retas e variadas,
+          opções de tecidos e cores combinam personalidade e bom gosto.
+        </p>
+      </article>
+      <div class="art-gallery">
+        <div id="romana" class="gallerys">
+          <!-- Inserted from JS -->
         </div>
+      </div>
     </section>
     <section class="sect-content gallery-left">
-        <article class="art-cortinas">
-            <h2>Celulares</h2>
-            <div class="underline-titles"></div>
-            <p>
-                Proporcionam luminosidade no interior do ambiente, ao mesmo tempo bloqueia os raios U.V, oferecendo um isolamento térmico e acústico. É uma excelente opção para ambientes sofisticados. Disponíveis nos tecidos black-out e translúcido.
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="celulares" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+      <article class="art-cortinas">
+        <h2>Celulares</h2>
+        <div class="underline-titles"></div>
+        <p>
+          Proporcionam luminosidade no interior do ambiente, ao mesmo tempo
+          bloqueia os raios U.V, oferecendo um isolamento térmico e acústico. É
+          uma excelente opção para ambientes sofisticados. Disponíveis nos
+          tecidos black-out e translúcido.
+        </p>
+      </article>
+      <div class="art-gallery">
+        <div id="celulares" class="gallerys">
+          <!-- Inserted from JS -->
         </div>
+      </div>
     </section>
     <section class="sect-content gallery-right">
-        <article class="art-cortinas">
-            <h2>Cortinas de tecido</h2>
-            <div class="underline-titles"></div>
-            <p>
-                As cortinas de tecidos demonstram um maior cuidado com ambiente, usando o tecido apropriado, elas reduzem o ruído vindo do exterior e aquecem o ambiente. Desenvolvemos designs personalizados e criamos cortinas com a melhor qualidade em tecidos e acabamento,
-                oferecendo sempre o que há de melhor nos materiais utilizados e seguindo as ultimas tendências em decoração
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="tecidos" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+      <article class="art-cortinas">
+        <h2>Cortinas de tecido</h2>
+        <div class="underline-titles"></div>
+        <p>
+          As cortinas de tecidos demonstram um maior cuidado com ambiente,
+          usando o tecido apropriado, elas reduzem o ruído vindo do exterior e
+          aquecem o ambiente. Desenvolvemos designs personalizados e criamos
+          cortinas com a melhor qualidade em tecidos e acabamento, oferecendo
+          sempre o que há de melhor nos materiais utilizados e seguindo as
+          ultimas tendências em decoração
+        </p>
+      </article>
+      <div class="art-gallery">
+        <div id="tecidos" class="gallerys">
+          <!-- Insert from JS -->
         </div>
+      </div>
     </section>
     <section class="sect-content gallery-left">
-        <article class="art-cortinas">
-            <h2>Rolôs Blackout / Tela Solar / Screen / Translucida</h2>
-            <div class="underline-titles"></div>
-            <p>
-                Solução em proteção solar e conforto térmico, através das opções de tecidos decorativos e Black out com acionamento manual ou elétrico em dois tipos: *Tela solar: Proteção eficiente contra calor e raios U.V aproveita a luminosidade natural e ao mesmo
-                tempo controlam a intensidade de calor. *Black-out elimina a claridade externa.
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="rolos" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+      <article class="art-cortinas">
+        <h2>Rolôs Blackout / Tela Solar / Screen / Translucida</h2>
+        <div class="underline-titles"></div>
+        <p>
+          Solução em proteção solar e conforto térmico, através das opções de
+          tecidos decorativos e Black out com acionamento manual ou elétrico em
+          dois tipos: *Tela solar: Proteção eficiente contra calor e raios U.V
+          aproveita a luminosidade natural e ao mesmo tempo controlam a
+          intensidade de calor. *Black-out elimina a claridade externa.
+        </p>
+      </article>
+      <div class="art-gallery">
+        <div id="rolos" class="gallerys">
+          <!-- Insert from JS -->
         </div>
+      </div>
     </section>
     <section class="sect-content gallery-right">
-        <article class="art-cortinas">
-            <h2>Tetos</h2>
-            <div class="underline-titles"></div>
-            <p>
-                Ideal para a proteção solar interna em tetos de vidro. Produzida com mecanismos de alta tecnologia e tecidos de excelente qualidade. A Cortina de Teto, proporciona aos ambientes conforto térmico, controle dos raios solares e da luminosidade do ambiente.
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="tetos" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+      <article class="art-cortinas">
+        <h2>Tetos</h2>
+        <div class="underline-titles"></div>
+        <p>
+          Ideal para a proteção solar interna em tetos de vidro. Produzida com
+          mecanismos de alta tecnologia e tecidos de excelente qualidade. A
+          Cortina de Teto, proporciona aos ambientes conforto térmico, controle
+          dos raios solares e da luminosidade do ambiente.
+        </p>
+      </article>
+      <div class="art-gallery">
+        <div id="tetos" class="gallerys">
+          <!-- Insert from JS -->
         </div>
+      </div>
     </section>
     <section class="sect-content gallery-left">
-        <article class="art-cortinas">
-            <h2>Translúcida</h2>
-            <div class="underline-titles"></div>
-            <p>
-                As cortinas Translúcidas obstruem a luz solar parcialmente proporcionando uma difusão melhor da luz solar e claridade, garantindo total proteção ao ambiente, e, ao mesmo tempo, valorizando a decoração.
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="translucida" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+      <article class="art-cortinas">
+        <h2>Translúcida</h2>
+        <div class="underline-titles"></div>
+        <p>
+          As cortinas Translúcidas obstruem a luz solar parcialmente
+          proporcionando uma difusão melhor da luz solar e claridade, garantindo
+          total proteção ao ambiente, e, ao mesmo tempo, valorizando a
+          decoração.
+        </p>
+      </article>
+      <div class="art-gallery">
+        <div id="translucida" class="gallerys">
+          <!-- Insert from JS -->
         </div>
+      </div>
     </section>
-    <button id="btnTop" class="btn-top" onclick="voltarTopo()"><i class="fas fa-chevron-up"></i></button>
+    <button id="btnTop" class="btn-top" onclick="voltarTopo()">
+      <i class="fas fa-chevron-up"></i>
+    </button>
     <footer>
-        <!-- Insert from JS -->
+      <!-- Insert from JS -->
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+      integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
