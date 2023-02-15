@@ -38,7 +38,6 @@ function getPage() {
   });
 }
 function selectFunctions(currentUrl) {
-  debugger;
   const pages = ["cortinas", "persianas", "toldos"];
   pages.forEach((page) => {
     if (currentUrl.indexOf(`${page}.html`) != -1) {
@@ -102,17 +101,16 @@ function setNumberOfImages(images, gallery) {
 
 function getJSON(url, callback) {
   return new Promise(() => {
-    debugger;
     let xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
     xhr.responseType = "json";
     xhr.onload = function () {
       let status = xhr.status;
-      // if (status === 200) {
-      //     console.log("Connection completed.\nStatus: " + status);
-      // } else {
-      //     console.log("Connection failed.\nStatus: " + status);
-      // }
+      if (status === 200) {
+        console.log("Connection completed.\nStatus: " + status);
+      } else {
+        console.log("Connection failed.\nStatus: " + status);
+      }
       callback(status, xhr.response);
     };
     xhr.send();
@@ -131,18 +129,16 @@ function setLoading() {
 }
 
 function getGalleries(currentUrl) {
-  debugger;
   const url = currentUrl;
   const galleries = document.querySelectorAll(".gallerys");
   galleries.forEach((gallery) => this.getTypeOfImage(gallery, url));
 }
 
 function getTypeOfImage(gallery, currentUrl) {
-  debugger;
   const typeOfGallery = gallery.id;
-  let imagesUrl = `${BASE_URL}/img_${
+  let imagesUrl = `/jsons/img_${
     currentUrl.split(".")[0]
-  }/${typeOfGallery}/`;
+  }/${typeOfGallery}/images.json`;
   this.setGallerysImages(imagesUrl, gallery);
 }
 function setGallerysImages(imageUrl, gallery) {
@@ -150,12 +146,13 @@ function setGallerysImages(imageUrl, gallery) {
     getJSON(imageUrl, (status, data) => {
       gallery.innerHTML = "";
       let newItem;
-      for (let i = 0; i < data.length; i++) {
+      let i = 0;
+      for (img of data) {
         if (i < 3) {
           newItem = `
                         <div class="gallery-item">
-                            <a href="${data[i].url}" target="_blanl" class="popup-link">
-                                <img src="${data[i].url}" alt="Imagem">
+                            <a href="${img.url}" target="_blanl" class="popup-link">
+                                <img src="${img.url}" alt="Imagem">
                             </a>
                         </div>
                     `;
@@ -163,8 +160,8 @@ function setGallerysImages(imageUrl, gallery) {
         } else if (i == 3 && data.length == 4) {
           newItem = `
                         <div class="gallery-item hidden firstHidden">
-                            <a href="${data[i].url}" target="_blanl" class="popup-link">
-                                <img src="${data[i].url}" alt="Imagem">
+                            <a href="${img.url}" target="_blanl" class="popup-link">
+                                <img src="${img.url}" alt="Imagem">
                             </a>
                         </div>
                     `;
@@ -172,9 +169,9 @@ function setGallerysImages(imageUrl, gallery) {
         } else if (i == 3 && data.length > 4) {
           newItem = `
                         <div class="gallery-item hidden firstHidden">
-                            <a href="${data[i].url}" target="_blanl" class="popup-link">
+                            <a href="${img.url}" target="_blanl" class="popup-link">
                                 <span class="gallery-hidden-span"></span>
-                                <img src="${data[i].url}" alt="Imagem">
+                                <img src="${img.url}" alt="Imagem">
                             </a>
                         </div>
                     `;
@@ -182,13 +179,14 @@ function setGallerysImages(imageUrl, gallery) {
         } else {
           newItem = `
                         <div class="gallery-item hidden">
-                            <a href="${data[i].url}" target="_blanl" class="popup-link">
-                                <img src="${data[i].url}" alt="Imagem">
+                            <a href="${img.url}" target="_blanl" class="popup-link">
+                                <img src="${img.url}" alt="Imagem">
                             </a>
                         </div>
                     `;
           gallery.innerHTML += newItem;
         }
+        i++;
       }
       if (data.length > 4) {
         this.getImage(gallery);
