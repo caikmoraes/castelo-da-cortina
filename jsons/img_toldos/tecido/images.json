@@ -1,5 +1,5 @@
 [
-  { "url": "/img/img_toldos/tecido/tecido1.jpg" },
-  { "url": "/img/img_toldos/tecido/tecido2.jpg" },
-  { "url": "/img/img_toldos/tecido/tecido3.jpg" }
+  {"url": "/img/img_toldos/tecido/tecido1.webp", "sm": "/img/img_toldos/tecido/tecido1-sm.webp", "w": 960, "h": 720},
+  {"url": "/img/img_toldos/tecido/tecido2.webp", "w": 540, "h": 960},
+  {"url": "/img/img_toldos/tecido/tecido3.webp", "w": 540, "h": 960}
 ]

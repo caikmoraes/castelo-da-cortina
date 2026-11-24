@@ -1,14 +1,14 @@
 [
-  { "url": "/img/img_cortinas/romana/romana10.jpeg" },
-  { "url": "/img/img_cortinas/romana/romana11.jpeg" },
-  { "url": "/img/img_cortinas/romana/romana12.jpeg" },
-  { "url": "/img/img_cortinas/romana/romana1CAR.png" },
-  { "url": "/img/img_cortinas/romana/romana2.jpeg" },
-  { "url": "/img/img_cortinas/romana/romana3.jpeg" },
-  { "url": "/img/img_cortinas/romana/romana4.jpg" },
-  { "url": "/img/img_cortinas/romana/romana5.jpeg" },
-  { "url": "/img/img_cortinas/romana/romana6.jpg" },
-  { "url": "/img/img_cortinas/romana/romana7.jpg" },
-  { "url": "/img/img_cortinas/romana/romana8.jpg" },
-  { "url": "/img/img_cortinas/romana/romana9.jpg" }
+  {"url": "/img/img_cortinas/romana/romana1CAR.webp", "sm": "/img/img_cortinas/romana/romana1CAR-sm.webp", "w": 1600, "h": 900},
+  {"url": "/img/img_cortinas/romana/romana2.webp", "w": 622, "h": 1280},
+  {"url": "/img/img_cortinas/romana/romana3.webp", "sm": "/img/img_cortinas/romana/romana3-sm.webp", "w": 1280, "h": 622},
+  {"url": "/img/img_cortinas/romana/romana4.webp", "w": 448, "h": 325},
+  {"url": "/img/img_cortinas/romana/romana5.webp", "w": 622, "h": 1280},
+  {"url": "/img/img_cortinas/romana/romana6.webp", "w": 448, "h": 325},
+  {"url": "/img/img_cortinas/romana/romana7.webp", "w": 500, "h": 371},
+  {"url": "/img/img_cortinas/romana/romana8.webp", "w": 448, "h": 321},
+  {"url": "/img/img_cortinas/romana/romana9.webp", "w": 448, "h": 321},
+  {"url": "/img/img_cortinas/romana/romana10.webp", "sm": "/img/img_cortinas/romana/romana10-sm.webp", "w": 1280, "h": 622},
+  {"url": "/img/img_cortinas/romana/romana11.webp", "sm": "/img/img_cortinas/romana/romana11-sm.webp", "w": 1280, "h": 736},
+  {"url": "/img/img_cortinas/romana/romana12.webp", "sm": "/img/img_cortinas/romana/romana12-sm.webp", "w": 1280, "h": 622}
 ]

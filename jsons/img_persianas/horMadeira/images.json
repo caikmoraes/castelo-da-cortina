@@ -1,9 +1,9 @@
 [
-  { "url": "/img/img_persianas/horMadeira/horMadeira1.jpeg" },
-  { "url": "/img/img_persianas/horMadeira/horMadeira2.jpg" },
-  { "url": "/img/img_persianas/horMadeira/horMadeira3.jpg" },
-  { "url": "/img/img_persianas/horMadeira/horMadeira4.jpg" },
-  { "url": "/img/img_persianas/horMadeira/horMadeira5.jpg" },
-  { "url": "/img/img_persianas/horMadeira/horMadeira6.jpeg" },
-  { "url": "/img/img_persianas/horMadeira/horMadeira7.jpeg" }
+  {"url": "/img/img_persianas/horMadeira/horMadeira1.webp", "w": 540, "h": 540},
+  {"url": "/img/img_persianas/horMadeira/horMadeira2.webp", "w": 496, "h": 396},
+  {"url": "/img/img_persianas/horMadeira/horMadeira3.webp", "w": 298, "h": 364},
+  {"url": "/img/img_persianas/horMadeira/horMadeira4.webp", "w": 500, "h": 335},
+  {"url": "/img/img_persianas/horMadeira/horMadeira5.webp", "w": 298, "h": 296},
+  {"url": "/img/img_persianas/horMadeira/horMadeira6.webp", "sm": "/img/img_persianas/horMadeira/horMadeira6-sm.webp", "w": 960, "h": 1280},
+  {"url": "/img/img_persianas/horMadeira/horMadeira7.webp", "w": 540, "h": 540}
 ]

@@ -1,277 +1,211 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="author"
-      content="Caik de Moraes Souza - caikdemoraes@gmail.com"
-    />
-    <meta name="author" content="Thiago Rodrigues - thiagof1212@gmail.com" />
-    <script
-      src="https://kit.fontawesome.com/883e8bb361.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="shortcut icon"
-      href="img/logo-peq.png"
-      sizes="32x32"
-      type="image/png"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Castelo da Cortina</title>
-  </head>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Castelo da Cortina — Cortinas, persianas e toldos em Osasco/SP</title>
+  <meta name="description" content="Cortinas, persianas e toldos sob medida em Osasco/SP, com oficina e lavanderia próprias. Peça seu orçamento pelo WhatsApp.">
+  <meta name="author" content="Caik de Moraes Souza - caikdemoraes@gmail.com">
+  <meta name="author" content="Thiago Rodrigues - thiagof1212@gmail.com">
+  <meta name="theme-color" content="#F5F0E9">
+  <link rel="icon" href="img/logo-peq.png" type="image/png">
+  <link rel="preload" href="fonts/DM_Serif_Display/DMSerifDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Manrope/Manrope-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home" data-root="">
+  <div id="site-header"></div>
 
-  <body>
-    <nav>
-      <ul class="menu">
-        <li class="logo">
-          <article class="artLogo">
-            <a href="/">
-              <img src="img/logo-peq.png" alt="Logo empresa" />
-              <div class="title">
-                <h3 class="zelito">Zelito das Cortinas</h3>
-                <h3>Cortinas e Persianas</h3>
-              </div>
-            </a>
-          </article>
-        </li>
-        <li class="item">
-          <a class="menu-link" href="pages/cortinas.html" id="cortinas"
-            >Cortinas</a
-          >
-        </li>
-        <li class="item">
-          <a class="menu-link" href="pages/persianas.html" id="persianas"
-            >Persianas</a
-          >
-        </li>
-        <li class="item">
-          <a class="menu-link" href="pages/toldos.html" id="toldos">Toldos</a>
-        </li>
-        <li class="item button">
-          <a class="menu-link" href="pages/contato.html" id="contato"
-            >Contato</a
-          >
-        </li>
-        <li class="toggle">
-          <label class="bars" id="open-menu" onclick="openMenu()"
-            ><i class="fas fa-bars"></i
-          ></label>
-          <label class="bars" id="exit-menu" onclick="exitMenu()"
-            ><i class="fas fa-times"></i
-          ></label>
-        </li>
-      </ul>
-    </nav>
-    <section id="sect_carousel">
-      <div id="carouselCortinas" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carouselCortinas"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carouselCortinas" data-slide-to="1"></li>
-          <li data-target="#carouselCortinas" data-slide-to="2"></li>
-          <li data-target="#carouselCortinas" data-slide-to="3"></li>
-          <li data-target="#carouselCortinas" data-slide-to="4"></li>
-          <li data-target="#carouselCortinas" data-slide-to="5"></li>
-          <li data-target="#carouselCortinas" data-slide-to="6"></li>
-          <li data-target="#carouselCortinas" data-slide-to="7"></li>
-          <li data-target="#carouselCortinas" data-slide-to="8"></li>
-          <li data-target="#carouselCortinas" data-slide-to="9"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="img/img_cortinas/fibraNatural/fibraNatural1CAR.png"
-              class="d-block w-100"
-              alt="Imagem de carrosel"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="img/img_cortinas/rolos/rolos4CAR.png"
-              class="d-block w-100"
-              alt="Imagem de carrosel"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="img/img_cortinas/romana/romana1CAR.png"
-              class="d-block w-100"
-              alt="Imagem de carrosel"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="img/img_cortinas/tetos/tetos4CAR.jpeg"
-              class="d-block w-100"
-              alt="Imagem de carrosel"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="img/img_cortinas/translucida/translucida7CAR.png"
-              class="d-block w-100"
-              alt="Imagem de carrosel"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="img/img_persianas/horAluminio/horAluminio5CAR.jpeg"
-              class="d-block w-100"
-              alt="Imagem de carrosel"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="img/img_persianas/roloDupla/roloDupla4CAR.jpg"
-              class="d-block w-100"
-              alt="Imagem de carrosel"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="img/img_toldos/transparente/transparente3CAR.jpeg"
-              class="d-block w-100"
-              alt="Imagem de carrosel"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="img/img_cortinas/tecidos/tecidos26CAR.jpeg"
-              class="d-block w-100"
-              alt="Imagem de carrosel"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="img/img_cortinas/celulares/celulares7CAR.png"
-              class="d-block w-100"
-              alt="Imagem de carrosel"
-            />
-          </div>
+  <main id="conteudo">
+    <!-- Hero -->
+    <section class="container hero">
+      <div class="hero-text">
+        <span class="eyebrow">Cortinas, persianas e toldos em Osasco</span>
+        <h1>Luz na medida certa para <em>cada ambiente</em>.</h1>
+        <p class="lead lead-long">Cortinas, persianas e toldos com ampla variedade de cores e padrões — e oficina e lavanderia próprias para cuidar deles depois.</p>
+        <p class="lead lead-short">Cortinas, persianas e toldos — com oficina e lavanderia próprias.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/5511999125703" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            Orçamento pelo WhatsApp
+          </a>
+          <a class="btn btn-outline" href="#projetos">Ver projetos realizados</a>
         </div>
-        <a
-          class="carousel-control-prev"
-          href="#carouselCortinas"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Próximo</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselCortinas"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
+      </div>
+      <div class="hero-media">
+        <img src="img/img_cortinas/translucida/translucida7CAR-sm.webp"
+             srcset="img/img_cortinas/translucida/translucida7CAR-sm.webp 640w, img/img_cortinas/translucida/translucida7CAR.webp 1600w"
+             sizes="(max-width: 720px) 100vw, 580px"
+             width="1600" height="1600" fetchpriority="high"
+             alt="Sala ampla com cortina translúcida sobre porta de vidro e piso de madeira">
+        <div class="hero-tag" aria-hidden="true">
+          <span class="hero-tag-label">Neste projeto</span>
+          <span class="hero-tag-name">Cortina translúcida</span>
+        </div>
       </div>
     </section>
-    <section id="whoWeAre" class="sect-content">
-      <article class="art-title">
-        <h2>Quem Somos</h2>
-        <div class="underline-titles"></div>
-      </article>
-      <article id="whoWeAre-content">
-        <p>
-          Somos uma empresa especializada em vendas de cortinas e persianas,
-          dispomos de ampla variedade de cores e padrões, atendendo com requinte
-          a qualquer estilo e preferência.
-        </p>
-        <p>
-          Oferecemos também, o serviço de manutenção e lavagem de cortinas,
-          persianas e tapetes com oficina e lavanderia próprias, o que nos dá a
-          condição de um melhor custo benefício.
-        </p>
-        <p>
-          Nossos técnicos com experiência no mercado há mais de 20 anos,
-          trabalham sempre se especializando no que há de melhor, trazendo assim
-          toda a confiabilidade e segurança que nossos clientes procuram.
-        </p>
-        <p>
-          Garantimos a qualidade de nossos serviços, pois o mais importante para
-          nós é a satisfação de nossos clientes.
-        </p>
-      </article>
-      <p class="effectPhrase">
-        Qualidade, sofisticação e modernidade para o seu ambiente.
-      </p>
+
+    <!-- Diferenciais -->
+    <section class="promises" aria-label="Por que a Castelo da Cortina">
+      <ul class="container">
+        <li><span class="promise-title">+20 anos</span><span>de experiência dos nossos técnicos no mercado</span></li>
+        <li><span class="promise-title">Oficina própria</span><span>e lavanderia própria — melhor custo-benefício</span></li>
+        <li><span class="promise-title">Do rústico ao moderno</span><span>ampla variedade de cores, tecidos e padrões</span></li>
+      </ul>
     </section>
-    <section class="sect-content" id="lines">
-      <article class="art-title">
-        <h2>Nossas linhas</h2>
-        <div class="underline-titles"></div>
-      </article>
-      <article id="cortinas" class="ourLines">
-        <h3>Cortinas</h3>
-        <p>
-          Modernas e arrojadas, com estilo de funcionamento diferenciado
-          proporcionam movimentos elegantes e sofisticados. A nossa linha de
-          cortinas, oferece versatilidade e elegância, personalidade e bom
-          gosto.
-        </p>
-        <div class="link-page-buttons">
-          <a href="pages/cortinas.html" class="page-buttons">Saiba mais</a>
+
+    <!-- Nossas linhas -->
+    <section class="section" id="linhas" aria-labelledby="linhas-titulo">
+      <div class="container lines-layout">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow eyebrow-desktop">Nossas linhas</span>
+            <h2 id="linhas-titulo"><span class="visually-hidden">Nossas linhas: </span>Escolha pela luz que você quer em casa.</h2>
+            <p class="section-intro">Do blackout para o quarto à tela solar da varanda: cada linha tem modelos para controlar luz, privacidade e temperatura.</p>
+          </div>
         </div>
-      </article>
-      <article id="persianas" class="ourLines">
-        <h3>Persianas</h3>
-        <p>
-          Nobre e aconchegante, capaz de valorizar os mais exigentes projetos de
-          decoração, do rústico ao moderno. Controle de luz que proporciona
-          conforto e tranqüilidade. Opcionais fitas decorativas, que permite a
-          coordenação ideal.
-        </p>
-        <div class="link-page-buttons">
-          <a href="pages/persianas.html" class="page-buttons">Saiba mais</a>
+        <div class="lines">
+          <a class="line-card" href="pages/cortinas.html">
+            <img src="img/img_cortinas/tecidos/tecidos14-sm.webp"
+                 srcset="img/img_cortinas/tecidos/tecidos14-sm.webp 640w, img/img_cortinas/tecidos/tecidos14.webp 1280w"
+                 sizes="(max-width: 720px) 96px, 380px"
+                 width="1280" height="622" loading="lazy"
+                 alt="Cortina de tecido leve em sala de estar com sofá">
+            <div class="line-card-body">
+              <div class="line-card-head"><h3>Cortinas</h3><span class="line-card-count">7 modelos <span aria-hidden="true">→</span></span></div>
+              <p>Modernas e arrojadas, com movimentos elegantes. Tecido, romana, rolô, celular, fibra natural, translúcida e para tetos.</p>
+            </div>
+          </a>
+          <a class="line-card" href="pages/persianas.html">
+            <img src="img/img_persianas/horMadeira/horMadeira1.webp"
+                 width="540" height="540" loading="lazy"
+                 alt="Persiana horizontal de madeira com luz do fim de tarde">
+            <div class="line-card-body">
+              <div class="line-card-head"><h3>Persianas</h3><span class="line-card-count">4 modelos <span aria-hidden="true">→</span></span></div>
+              <p>Nobres e aconchegantes, com controle de luz preciso. Horizontal em alumínio ou madeira, rolô dupla e vertical.</p>
+            </div>
+          </a>
+          <a class="line-card" href="pages/toldos.html">
+            <img src="img/img_toldos/transparente/transparente3CAR-sm.webp"
+                 srcset="img/img_toldos/transparente/transparente3CAR-sm.webp 640w, img/img_toldos/transparente/transparente3CAR.webp 1280w"
+                 sizes="(max-width: 720px) 96px, 380px"
+                 width="1280" height="960" loading="lazy"
+                 alt="Toldo transparente fechando varanda com churrasqueira">
+            <div class="line-card-body">
+              <div class="line-card-head"><h3>Toldos</h3><span class="line-card-count">2 modelos <span aria-hidden="true">→</span></span></div>
+              <p>Proteção contra sol, vento e chuva para fachadas e varandas. Em lona de tecido ou transparente.</p>
+            </div>
+          </a>
         </div>
-      </article>
-      <article id="toldos" class="ourLines">
-        <h3>Toldos</h3>
-        <p>
-          Um toldo é uma cobertura secundária fixada à fachada de um edifício,
-          que serve para proteger do Sol, do vento e da chuva. É tipicamente
-          composta por uma lona de fibra acrílica, algodão ou poliéster.
-        </p>
-        <div class="link-page-buttons">
-          <a href="pages/toldos.html" class="page-buttons">Saiba mais</a>
-        </div>
-      </article>
+      </div>
     </section>
-    <button id="btnTop" class="btn-top" onclick="voltarTopo()">
-      <i class="fas fa-chevron-up"></i>
-    </button>
-    <footer>
-      <!-- Insert from JS -->
-    </footer>
-    <script src="javascript/script.js"></script>
-  </body>
+
+    <!-- Lavagem e manutenção -->
+    <section class="section section-dark on-dark" id="servicos" aria-labelledby="servicos-titulo">
+      <div class="container services">
+        <div class="services-text">
+          <span class="eyebrow">Depois da instalação</span>
+          <h2 id="servicos-titulo">Lavagem e manutenção com oficina própria.</h2>
+          <p>Cuidamos de cortinas, persianas e tapetes na nossa própria lavanderia — sem terceirizar, com mais controle e melhor custo-benefício.</p>
+          <a class="btn btn-light" href="https://wa.me/5511999125703" target="_blank" rel="noopener">Agendar uma lavagem</a>
+        </div>
+        <ul class="services-list">
+          <li><strong>Cortinas</strong><span>Lavagem e manutenção</span></li>
+          <li><strong>Persianas</strong><span>Lavagem e manutenção</span></li>
+          <li><strong>Tapetes</strong><span>Lavagem em lavanderia própria</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projetos realizados -->
+    <section class="section" id="projetos" aria-labelledby="projetos-titulo">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow eyebrow-desktop">Projetos realizados</span>
+            <h2 id="projetos-titulo"><span class="visually-hidden">Projetos realizados: </span>Ambientes que já transformamos.</h2>
+          </div>
+          <a class="text-link" href="https://www.instagram.com/castelodacortina" target="_blank" rel="noopener">Mais no Instagram <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="projects">
+          <figure class="big">
+            <img src="img/img_cortinas/fibraNatural/fibraNatural1CAR-sm.webp"
+                 srcset="img/img_cortinas/fibraNatural/fibraNatural1CAR-sm.webp 640w, img/img_cortinas/fibraNatural/fibraNatural1CAR.webp 1600w"
+                 sizes="(max-width: 900px) 100vw, 590px" width="1600" height="1600" loading="lazy"
+                 alt="Cortinas de fibra natural em cozinha gourmet com teto de vidro">
+            <figcaption>Fibra natural</figcaption>
+          </figure>
+          <figure>
+            <img src="img/img_cortinas/rolos/rolos4CAR-sm.webp"
+                 width="640" height="640" loading="lazy"
+                 alt="Rolô de tela solar na varanda de uma cozinha integrada">
+            <figcaption>Rolô tela solar</figcaption>
+          </figure>
+          <figure class="tall">
+            <img src="img/img_cortinas/tecidos/tecidos26CAR-sm.webp"
+                 width="640" height="1317" loading="lazy"
+                 alt="Cortinas de tecido listrado em cinza e branco com voal">
+            <figcaption>Cortina de tecido</figcaption>
+          </figure>
+          <figure>
+            <img src="img/img_persianas/roloDupla/roloDupla4CAR-sm.webp"
+                 width="640" height="481" loading="lazy"
+                 alt="Persiana rolô dupla em sala de reunião">
+            <figcaption>Rolô dupla</figcaption>
+          </figure>
+          <figure class="span-2">
+            <img src="img/img_cortinas/romana/romana1CAR-sm.webp"
+                 srcset="img/img_cortinas/romana/romana1CAR-sm.webp 640w, img/img_cortinas/romana/romana1CAR.webp 1600w"
+                 sizes="(max-width: 900px) 50vw, 590px" width="1600" height="900" loading="lazy"
+                 alt="Cortina romana em escritório com quadros na parede">
+            <figcaption>Romana</figcaption>
+          </figure>
+          <figure class="span-2">
+            <img src="img/img_persianas/vertical/vertical10-sm.webp"
+                 srcset="img/img_persianas/vertical/vertical10-sm.webp 640w, img/img_persianas/vertical/vertical10.webp 1280w"
+                 sizes="(max-width: 900px) 50vw, 590px" width="1280" height="720" loading="lazy"
+                 alt="Persiana vertical clara em sala de estar">
+            <figcaption>Persiana vertical</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quem somos -->
+    <section class="section section-alt" aria-labelledby="quem-somos">
+      <div class="container about">
+        <blockquote>“Qualidade, sofisticação e modernidade para o seu ambiente.”</blockquote>
+        <div class="about-text">
+          <h2 class="eyebrow" id="quem-somos">Quem somos</h2>
+          <p>Somos uma empresa especializada em cortinas e persianas, com ampla variedade de cores e padrões para atender com requinte a qualquer estilo.</p>
+          <p>Nossos técnicos estão no mercado há mais de 20 anos e seguem se especializando no que há de melhor — para trazer a confiabilidade e a segurança que você procura.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section" aria-labelledby="orcamento-titulo">
+      <div class="container contact-band">
+        <div class="contact-band-text">
+          <h2 id="orcamento-titulo">Faça seu orçamento.</h2>
+          <p>Fale com a gente pelo WhatsApp e receba sugestões de modelo e orçamento.</p>
+        </div>
+        <div class="contact-band-links">
+          <a class="contact-row contact-row-primary" href="https://wa.me/5511999125703" target="_blank" rel="noopener">
+            <span>WhatsApp (11) 99912-5703</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="contact-row" href="tel:+551136059089">
+            <span>Telefone fixo (11) 3605-9089</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="contact-band-note">R. Paraguaçú, 51 — Jardim D'Abril, Osasco/SP</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="javascript/script.js"></script>
+</body>
 </html>

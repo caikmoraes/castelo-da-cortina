@@ -1,90 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Caik de Moraes Souza - caikdemoraes@gmail.com">
-    <meta name="author" content="Thiago Rodrigues - thiagof1212@gmail.com">
-    <script src="https://kit.fontawesome.com/883e8bb361.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" />
-    <link rel="shortcut icon" href="../img/logo-peq.png" sizes="32x32" type="image/png">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../javascript/script.js"></script>
-    <title>Castelo da Cortina - Toldos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toldos sob medida — Castelo da Cortina</title>
+  <meta name="description" content="Toldos de tecido e transparentes para fachadas, varandas e áreas de lazer em Osasco/SP.">
+  <meta name="author" content="Caik de Moraes Souza - caikdemoraes@gmail.com">
+  <meta name="author" content="Thiago Rodrigues - thiagof1212@gmail.com">
+  <meta name="theme-color" content="#F5F0E9">
+  <link rel="icon" href="../img/logo-peq.png" type="image/png">
+  <link rel="preload" href="../fonts/DM_Serif_Display/DMSerifDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/Manrope/Manrope-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+<body data-page="toldos" data-root="../">
+  <div id="site-header"></div>
 
-<body>
-    <nav>
-        <ul class="menu">
-            <li class="logo">
-                <article class="artLogo">
-                    <a href="/">
-                        <img src="../img/logo-peq.png" alt="Logo empresa">
-                        <div class="title">
-                            <h3 class="zelito">Zelito das Cortinas</h3>
-                            <h3>Cortinas e Persianas</h3>
-                        </div>
-                    </a>
-                </article>
-            </li>
-            <li class="item"><a class="menu-link" href="cortinas.html" id="cortinas">Cortinas</a></li>
-            <li class="item"><a class="menu-link" href="persianas.html" id="persianas">Persianas</a></li>
-            <li class="item"><a class="menu-link" href="toldos.html" id="toldos">Toldos</a></li>
-            <li class="item button"><a class="menu-link" href="contato.html" id="contato">Contato</a></li>
-            <li class="toggle">
-                <label class="bars" id="open-menu" onclick="openMenu()"><i class="fas fa-bars"></i></label>
-                <label class="bars" id="exit-menu" onclick="exitMenu()"><i class="fas fa-times"></i></label>
-            </li>
-        </ul>
-    </nav>
-    <div class="separator-menu"></div>
-    <section class="sect-content">
-        <article class="art-title">
-            <h1>Tipos de Toldos</h1>
-            <div class="underline-titles"></div>
-        </article>
-        <article class="cortina-content">
-            <p>Trabalhamos com dois tipos de toldos, sempre visando a entrega do melhor produto para o cliente. Assim, podemos deixar seu lar ou ambiente de trabalho protegido da ação do clima.</p>
-        </article>
+  <main id="conteudo">
+    <section class="container page-intro">
+      <div>
+        <nav class="breadcrumb" aria-label="Você está em">
+          <ol><li><a href="../index.html">Início</a></li><li aria-current="page">Toldos</li></ol>
+        </nav>
+        <h1>Toldos</h1>
+        <p class="lead">Proteção contra sol, vento e chuva para fachadas, varandas e áreas de lazer. Trabalhamos com dois tipos — veja qual combina com o seu espaço.</p>
+      </div>
     </section>
 
-    <section class="sect-content gallery-left">
-        <article class="art-cortinas">
-            <h2>Toldo de tecido</h2>
-            <div class="underline-titles"></div>
-            <p>Possui grande resistência ao sol e ao desbotamento e baixa passagem de luz. Ideal para ambientes mais sofisticados. Excelente na decoração e no conforto térmico.</p>       
-        </article>
-        <div class="art-gallery">
-            <div id="tecido" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+    <div class="container awnings">
+      <article class="awning" aria-labelledby="tecido-titulo">
+        <img src="../img/img_toldos/tecido/tecido1-sm.webp"
+             srcset="../img/img_toldos/tecido/tecido1-sm.webp 640w, ../img/img_toldos/tecido/tecido1.webp 960w"
+             sizes="(max-width: 720px) 100vw, 584px" width="960" height="720"
+             alt="Toldo de tecido bege recolhido sobre porta de garagem">
+        <div class="awning-body">
+          <h2 id="tecido-titulo">Toldo de tecido</h2>
+          <p>Grande resistência ao sol e ao desbotamento, com baixa passagem de luz. Ideal para ambientes mais sofisticados — excelente na decoração e no conforto térmico.</p>
+          <dl class="specs">
+            <div><dt>Luz</dt><dd>Baixa passagem</dd></div>
+            <div><dt>Destaque</dt><dd>Conforto térmico</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/5511999125703" target="_blank" rel="noopener">Orçamento de toldo de tecido</a>
+            <button type="button" class="btn btn-outline" data-gallery="img_toldos/tecido" data-title="Toldo de tecido">Ver fotos <span data-count-for="img_toldos/tecido"></span></button>
+          </div>
         </div>
-    </section>
-
-    <section class="sect-content gallery-right">
-        <article class="art-cortinas">
-            <h2>Toldo transparente</h2>
-            <div class="underline-titles"></div>
-            <p>
-                Embelezam o ambiente com exclusividade e leveza, especialmente em espaços que necessitam, ao mesmo tempo, de luz natural e proteção contra chuvas.
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="transparente" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+      </article>
+      <article class="awning" aria-labelledby="transparente-titulo">
+        <img src="../img/img_toldos/transparente/transparente3CAR-sm.webp"
+             srcset="../img/img_toldos/transparente/transparente3CAR-sm.webp 640w, ../img/img_toldos/transparente/transparente3CAR.webp 1280w"
+             sizes="(max-width: 720px) 100vw, 584px" width="1280" height="960"
+             alt="Toldo transparente fechando varanda com churrasqueira">
+        <div class="awning-body">
+          <h2 id="transparente-titulo">Toldo transparente</h2>
+          <p>Embeleza o ambiente com exclusividade e leveza, especialmente em espaços que precisam, ao mesmo tempo, de luz natural e proteção contra a chuva.</p>
+          <dl class="specs">
+            <div><dt>Luz</dt><dd>Luz natural mantida</dd></div>
+            <div><dt>Destaque</dt><dd>Proteção contra chuva</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/5511999125703" target="_blank" rel="noopener">Orçamento de toldo transparente</a>
+            <button type="button" class="btn btn-outline" data-gallery="img_toldos/transparente" data-title="Toldo transparente">Ver fotos <span data-count-for="img_toldos/transparente"></span></button>
+          </div>
         </div>
-    </section>
+      </article>
+    </div>
 
-    <button id="btnTop" class="btn-top" onclick="voltarTopo()"><i class="fas fa-chevron-up"></i></button>
-    <footer>
-        <!-- Insert from JS -->
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous"></script>
+    <section class="section-dark on-dark" aria-labelledby="duvida-titulo">
+      <div class="container help-band">
+        <div>
+          <h2 id="duvida-titulo">Na dúvida entre os dois?</h2>
+          <p>Conte como é a sua fachada ou varanda e indicamos o melhor tipo para o seu espaço.</p>
+        </div>
+        <a class="btn btn-light" href="https://wa.me/5511999125703" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../javascript/script.js"></script>
 </body>
-
 </html>
