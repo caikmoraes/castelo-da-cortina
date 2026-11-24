@@ -52,4 +52,5 @@ To add a category: create the image folder, run both scripts, and add the model'
 
 ### Known quirks
 
-- No deployment config is committed.
+- No deployment config is committed. Production is https://www.castelodacortina.com.br (behind Cloudflare); the GitHub Pages URL is only for testing.
+- SEO: every page has a `<link rel="canonical">` to its production URL, `index.html` carries the `LocalBusiness` JSON-LD, and `sitemap.xml` / `robots.txt` list the pages. A new page needs its canonical and a sitemap entry; contact changes must also update the JSON-LD.
