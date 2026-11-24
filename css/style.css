@@ -345,8 +345,6 @@ a:hover { color: var(--accent-hover); }
   .topbar { display: none; }
 }
 
-/* noscript: navegação mínima quando o JS não roda */
-.noscript-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 16px var(--gutter); }
 
 /* ---------- Seções ---------- */
 
