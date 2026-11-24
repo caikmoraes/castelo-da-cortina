@@ -148,9 +148,12 @@
     var models = Array.prototype.slice.call(document.querySelectorAll(".model"));
     if (!buttons.length || !models.length) return;
 
+    function isModel(id) {
+      return models.some(function (m) { return m.id === id; });
+    }
+
     function show(id) {
-      var found = models.some(function (m) { return m.id === id; });
-      if (!found) id = models[0].id;
+      if (!isModel(id)) id = models[0].id;
       models.forEach(function (m) { m.hidden = m.id !== id; });
       buttons.forEach(function (b) {
         b.setAttribute("aria-pressed", String(b.getAttribute("data-model") === id));
@@ -158,32 +161,21 @@
       return id;
     }
 
-    function pick(id, scroll) {
-      id = show(id);
-      history.replaceState(null, "", "#" + id);
-      if (scroll) document.getElementById(id).scrollIntoView({ block: "start" });
-    }
-
     chips.hidden = false;
     show(location.hash.slice(1));
 
     buttons.forEach(function (b) {
-      b.addEventListener("click", function () { pick(b.getAttribute("data-model"), false); });
+      b.addEventListener("click", function () {
+        history.replaceState(null, "", "#" + show(b.getAttribute("data-model")));
+      });
     });
 
-    // Links #modelo (ex.: vindos de outras páginas): escolhem e rolam até o modelo.
-    document.addEventListener("click", function (e) {
-      var a = e.target.closest('a[href^="#"]');
-      if (!a) return;
-      var id = a.getAttribute("href").slice(1);
-      if (!models.some(function (m) { return m.id === id; })) return;
-      e.preventDefault();
-      pick(id, true);
-      var chip = chips.querySelector('[data-model="' + id + '"]');
-      if (chip) chip.focus({ preventScroll: true });
+    // Só hashes de modelo trocam a seleção; outros (ex.: #conteudo do link
+    // "Pular para o conteúdo") mantêm o modelo escolhido.
+    window.addEventListener("hashchange", function () {
+      var id = location.hash.slice(1);
+      if (isModel(id)) show(id);
     });
-
-    window.addEventListener("hashchange", function () { show(location.hash.slice(1)); });
   }
 
   /* ---------- Galerias + lightbox ---------- */

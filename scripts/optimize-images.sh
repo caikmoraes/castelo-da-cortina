@@ -22,10 +22,13 @@ QUALITY=78
 if [ "$#" -gt 0 ]; then
   files=("$@")
 else
-  mapfile -t files < <(find img/img_* -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) | sort)
+  # while-read instead of mapfile so it also runs on bash 3.2 (macOS default).
+  files=()
+  while IFS= read -r f; do files+=("$f"); done \
+    < <(find img/img_* -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) | sort)
 fi
 
-for src in "${files[@]}"; do
+for src in ${files[@]+"${files[@]}"}; do
   base="${src%.*}"
   width=$(vipsheader -f width "$src")
 
