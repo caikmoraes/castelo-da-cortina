@@ -1,9 +1,9 @@
 [
-  { "url": "/img/img_cortinas/celulares/celulares1.jpg" },
-  { "url": "/img/img_cortinas/celulares/celulares2.jpg" },
-  { "url": "/img/img_cortinas/celulares/celulares3.jpg" },
-  { "url": "/img/img_cortinas/celulares/celulares4.jpg" },
-  { "url": "/img/img_cortinas/celulares/celulares5.jpg" },
-  { "url": "/img/img_cortinas/celulares/celulares6.jpeg" },
-  { "url": "/img/img_cortinas/celulares/celulares7CAR.png" }
+  {"url": "/img/img_cortinas/celulares/celulares7CAR.webp", "sm": "/img/img_cortinas/celulares/celulares7CAR-sm.webp", "w": 1600, "h": 3293},
+  {"url": "/img/img_cortinas/celulares/celulares1.webp", "w": 260, "h": 281},
+  {"url": "/img/img_cortinas/celulares/celulares2.webp", "w": 402, "h": 500},
+  {"url": "/img/img_cortinas/celulares/celulares3.webp", "w": 302, "h": 300},
+  {"url": "/img/img_cortinas/celulares/celulares4.webp", "w": 380, "h": 452},
+  {"url": "/img/img_cortinas/celulares/celulares5.webp", "w": 500, "h": 374},
+  {"url": "/img/img_cortinas/celulares/celulares6.webp", "w": 622, "h": 1280}
 ]

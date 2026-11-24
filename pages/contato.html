@@ -1,79 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Caik de Moraes Souza - caikdemoraes@gmail.com">
-    <meta name="author" content="Thiago Rodrigues - thiagof1212@gmail.com">
-    <script src="https://kit.fontawesome.com/883e8bb361.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../img/logo-peq.png" sizes="32x32" type="image/png">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../javascript/script.js"></script>
-    <title>Castelo da Cortina - Contato</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato — Castelo da Cortina</title>
+  <meta name="description" content="Fale com a Castelo da Cortina pelo WhatsApp, telefone ou e-mail. R. Paraguaçú, 51 — Jardim D'Abril, Osasco/SP.">
+  <meta name="author" content="Caik de Moraes Souza - caikdemoraes@gmail.com">
+  <meta name="author" content="Thiago Rodrigues - thiagof1212@gmail.com">
+  <meta name="theme-color" content="#F5F0E9">
+  <link rel="icon" href="../img/logo-peq.png" type="image/png">
+  <link rel="preload" href="../fonts/DM_Serif_Display/DMSerifDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/Manrope/Manrope-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+<body data-page="contato" data-root="../">
+  <div id="site-header">
+    <noscript>
+      <nav class="noscript-nav" aria-label="Principal">
+        <a href="../index.html">Início</a>
+        <a href="cortinas.html">Cortinas</a>
+        <a href="persianas.html">Persianas</a>
+        <a href="toldos.html">Toldos</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </noscript>
+  </div>
 
-<body>
-    <nav>
-        <ul class="menu">
-            <li class="logo">
-                <article class="artLogo">
-                    <a href="/">
-                        <img src="../img/logo-peq.png" alt="Logo empresa">
-                        <div class="title">
-                            <h3 class="zelito">Zelito das Cortinas</h3>
-                            <h3>Cortinas e Persianas</h3>
-                        </div>
-                    </a>
-                </article>
-            </li>
-            <li class="item"><a class="menu-link" href="cortinas.html" id="cortinas">Cortinas</a></li>
-            <li class="item"><a class="menu-link" href="persianas.html" id="persianas">Persianas</a></li>
-            <li class="item"><a class="menu-link" href="toldos.html" id="toldos">Toldos</a></li>
-            <li class="item button"><a class="menu-link" href="contato.html" id="contato">Contato</a></li>
-            <li class="toggle">
-                <label class="bars" id="open-menu" onclick="openMenu()"><i class="fas fa-bars"></i></label>
-                <label class="bars" id="exit-menu" onclick="exitMenu()"><i class="fas fa-times"></i></label>
-            </li>
-        </ul>
-    </nav>
-    <section class="sect-content" id="contact-us">
-        <article class="art-title" id="faleConosco">
-            <h1>Contato</h1>
-            <div class="underline-titles"></div>
-        </article>
-        <article id="contact-content">
-            <p>Entre em contato conosco através do nosso Whatsapp ou envie um email:</p>
-            <article class="p-info">
-                <p>
-                    <i class="far fa-envelope contact-icon"></i>
-                    <br>
-                    <a href="mailto:castelodacortina@hotmail.com">castelodacortina@hotmail.com</a>
-                </p>
-                <p><i class="fab fa-whatsapp contact-icon whatsapp"></i><br>(11)3605-9089 | (11)99912-5703 | (11)99170-3173</p>
-            </article>
-        </article>
+  <main id="conteudo">
+    <section class="container contact-intro" aria-labelledby="contato-titulo">
+      <div class="contact-intro-text">
+        <nav class="breadcrumb" aria-label="Você está em">
+          <ol><li><a href="../index.html">Início</a></li><li aria-current="page">Contato</li></ol>
+        </nav>
+        <h1 id="contato-titulo">Fale com a gente.</h1>
+        <p class="lead">O jeito mais rápido é pelo WhatsApp: conte o que você precisa.</p>
+      </div>
+      <ul class="channels">
+        <li>
+          <a class="channel channel-primary" href="https://wa.me/5511999125703" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            <span class="channel-label">WhatsApp</span>
+            <span class="channel-value">(11) 99912-5703</span>
+          </a>
+        </li>
+        <li>
+          <a class="channel" href="tel:+551136059089">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            <span class="channel-label">Telefone</span>
+            <span class="channel-value">(11) 3605-9089</span>
+          </a>
+        </li>
+        <li class="channel-wide">
+          <a class="channel" href="mailto:castelodacortina@hotmail.com">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <span class="channel-label">E-mail</span>
+            <span class="channel-value is-email">castelodacortina@hotmail.com</span>
+          </a>
+        </li>
+      </ul>
     </section>
-    <section class="sect-content">
-        <article id="foundUs" class="art-title">
-            <h2>Nos encontre</h2>
-            <div class="underline-titles"></div>
-        </article>
-        <article id="foundUs-content">
-            <iframe id="map"
+
+    <section class="section section-alt" aria-labelledby="visita-titulo">
+      <div class="container visit">
+        <div class="visit-text">
+          <span class="eyebrow">Nos encontre</span>
+          <h2 id="visita-titulo">Oficina e loja em Osasco</h2>
+          <address>R. Paraguaçú, 51<br>Jardim D'Abril — Osasco/SP<br>CEP 06033-160</address>
+          <a class="btn btn-outline" href="https://g.page/castelo-da-cortina?gm" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Abrir no Google Maps
+          </a>
+        </div>
+        <iframe class="map"
+                title="Mapa: Castelo da Cortina, R. Paraguaçú, 51 — Jardim D'Abril, Osasco/SP"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7314.340063939202!2d-46.775664!3d-23.562336!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5588c18b4769%3A0x956d499658f62971!2sR.+Paragua%C3%A7%C3%BA%2C+51+-+Jardim+D'abril%2C+Osasco+-+SP%2C+06033-160!5e0!3m2!1sen!2sbr!4v1518191855926"></iframe>
-            <i class="fas fa-map-marked-alt contact-icon"></i>
-            <p>R. Paraguaçú, 51 - Jardim D'abril - Osasco/SP</p>
-        </article>
+      </div>
     </section>
-    <button id="btnTop" class="btn-top" onclick="voltarTopo()"><i class="fas fa-chevron-up"></i></button>
-    <footer>
-        <!-- Insert from JS -->
-    </footer>
-</body>
+  </main>
 
+  <div id="site-footer"></div>
+  <script src="../javascript/script.js"></script>
+</body>
 </html>

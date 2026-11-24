@@ -1,121 +1,137 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Caik de Moraes Souza - caikdemoraes@gmail.com">
-    <meta name="author" content="Thiago Rodrigues - thiagof1212@gmail.com">
-    <script src="https://kit.fontawesome.com/883e8bb361.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" />
-    <link rel="shortcut icon" href="../img/logo-peq.png" sizes="32x32" type="image/png">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../javascript/script.js"></script>
-    <title>Castelo da Cortina - Persianas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Persianas sob medida — Castelo da Cortina</title>
+  <meta name="description" content="Persianas horizontais de madeira e alumínio, rolô dupla e vertical, sob medida em Osasco/SP.">
+  <meta name="author" content="Caik de Moraes Souza - caikdemoraes@gmail.com">
+  <meta name="author" content="Thiago Rodrigues - thiagof1212@gmail.com">
+  <meta name="theme-color" content="#F5F0E9">
+  <link rel="icon" href="../img/logo-peq.png" type="image/png">
+  <link rel="preload" href="../fonts/DM_Serif_Display/DMSerifDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/Manrope/Manrope-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+<body data-page="persianas" data-root="../">
+  <div id="site-header">
+    <noscript>
+      <nav class="noscript-nav" aria-label="Principal">
+        <a href="../index.html">Início</a>
+        <a href="cortinas.html">Cortinas</a>
+        <a href="persianas.html">Persianas</a>
+        <a href="toldos.html">Toldos</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </noscript>
+  </div>
 
-<body>
-    <nav>
-        <ul class="menu">
-            <li class="logo">
-                <article class="artLogo">
-                    <a href="/">
-                        <img src="../img/logo-peq.png" alt="Logo empresa">
-                        <div class="title">
-                            <h3 class="zelito">Zelito das Cortinas</h3>
-                            <h3>Cortinas e Persianas</h3>
-                        </div>
-                    </a>
-                </article>
-            </li>
-            <li class="item"><a class="menu-link" href="cortinas.html" id="cortinas">Cortinas</a></li>
-            <li class="item"><a class="menu-link" href="persianas.html" id="persianas">Persianas</a></li>
-            <li class="item"><a class="menu-link" href="toldos.html" id="toldos">Toldos</a></li>
-            <li class="item button"><a class="menu-link" href="contato.html" id="contato">Contato</a></li>
-            <li class="toggle">
-                <label class="bars" id="open-menu" onclick="openMenu()"><i class="fas fa-bars"></i></label>
-                <label class="bars" id="exit-menu" onclick="exitMenu()"><i class="fas fa-times"></i></label>
-            </li>
-        </ul>
-    </nav>
-    <div class="separator-menu"></div>
-    <section class="sect-content">
-        <article class="art-title">
-            <h1>Tipos de Persianas</h1>
-            <div class="underline-titles"></div>
-        </article>
-        <article class="cortina-content">
-            <p>Trabalhamos com varios tipos de persianas, sempre visando uma ampla lista de opções para o cliente. Assim, podemos deixar seu lar ou ambiente de trabalho moderno e sofisticado.</p>
-        </article>
-    </section>
-    <section class="sect-content gallery-left">
-        <article class="art-cortinas">
-            <h2>Horizontal de Aluminio</h2>
-            <div class="underline-titles"></div>
-            <p>
-                Horizontal em Alumínio 16, 25 e 50 mm Prática e durável, se ajusta a pequenos e grandes vãos, adequando-se ao seu projeto de decoração. Conta com cores e texturas atualizadas, podendo ter acionamento manual ou motorizado.
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="horAluminio" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
-        </div>
+  <main id="conteudo">
+    <section class="container page-intro">
+      <div>
+        <nav class="breadcrumb" aria-label="Você está em">
+          <ol><li><a href="../index.html">Início</a></li><li aria-current="page">Persianas</li></ol>
+        </nav>
+        <h1>Persianas</h1>
+        <p class="lead">Vários tipos para deixar sua casa ou seu escritório moderno e sofisticado. Escolha um modelo para ver detalhes.</p>
+      </div>
+      <span class="page-intro-count">4 modelos</span>
     </section>
 
-    <section class="sect-content gallery-right">
-        <article class="art-cortinas">
-            <h2>Horizontal de Madeira</h2>
-            <div class="underline-titles"></div>
-            <p>
-                Horizontal em Madeira 50 mm Nobre e aconchegante, capaz de valorizar os mais exigentes projetos de decoração, do rústico ao moderno. Controle de luz que proporciona conforto e tranqüilidade. Opcionais fitas decorativas, que permite a coordenação ideal
-                para seu projeto.
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="horMadeira" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+    <div class="container">
+      <div class="chips" role="group" aria-label="Modelos de persiana" hidden>
+        <button type="button" class="chip" data-model="horMadeira" aria-controls="horMadeira" aria-pressed="true">Horizontal de madeira</button>
+        <button type="button" class="chip" data-model="horAluminio" aria-controls="horAluminio" aria-pressed="false">Horizontal de alumínio</button>
+        <button type="button" class="chip" data-model="roloDupla" aria-controls="roloDupla" aria-pressed="false">Rolô dupla</button>
+        <button type="button" class="chip" data-model="vertical" aria-controls="vertical" aria-pressed="false">Vertical</button>
+      </div>
+    </div>
+
+    <div class="container models">
+      <article class="model" id="horMadeira" aria-labelledby="horMadeira-titulo">
+        <button type="button" class="model-photo" data-gallery="img_persianas/horMadeira" data-title="Horizontal de madeira">
+          <img src="../img/img_persianas/horMadeira/horMadeira1.webp" width="540" height="540" alt="Persiana horizontal de madeira sobre a janela de uma sala">
+          <span class="visually-hidden">Ver todas as fotos: Horizontal de madeira</span>
+        </button>
+        <div class="model-body">
+          <span class="eyebrow">Modelo 1 de 4</span>
+          <h2 id="horMadeira-titulo">Horizontal de madeira</h2>
+          <p>Nobre e aconchegante, capaz de valorizar os mais exigentes projetos de decoração, do rústico ao moderno. Controle de luz que traz conforto e tranquilidade.</p>
+          <ul class="checklist">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Lâminas de 50 mm</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Controle de luz preciso</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Fitas decorativas opcionais</span></li>
+          </ul>
+          <div class="actions model-actions">
+            <a class="btn btn-primary" href="https://wa.me/5511999125703" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Orçamento de persiana de madeira</a>
+            <button type="button" class="btn btn-outline" data-gallery="img_persianas/horMadeira" data-title="Horizontal de madeira">Ver fotos<span data-count-for="img_persianas/horMadeira"></span></button>
+          </div>
         </div>
-    </section>
-    <section class="sect-content gallery-left">
-        <article class="art-cortinas">
-            <h2>Verticais</h2>
-            <div class="underline-titles"></div>
-            <p>
-                Com uma grande variedade de cores e texturas, com ou sem galeria é indicada para diversos ambientes, possibilitando o controle eficaz da luminosidade e melhor fechamento entre as lâminas. Destaca-se por sua durabilidade e facilidade na higienização.
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="vertical" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+      </article>
+      <article class="model" id="horAluminio" aria-labelledby="horAluminio-titulo">
+        <button type="button" class="model-photo" data-gallery="img_persianas/horAluminio" data-title="Horizontal de alumínio">
+          <img src="../img/img_persianas/horAluminio/horAluminio5CAR-sm.webp" srcset="../img/img_persianas/horAluminio/horAluminio5CAR-sm.webp 640w, ../img/img_persianas/horAluminio/horAluminio5CAR.webp 1280w" sizes="(max-width: 720px) 100vw, 560px" width="1280" height="960" loading="lazy" alt="Persiana horizontal de alumínio preta em cozinha">
+          <span class="visually-hidden">Ver todas as fotos: Horizontal de alumínio</span>
+        </button>
+        <div class="model-body">
+          <span class="eyebrow">Modelo 2 de 4</span>
+          <h2 id="horAluminio-titulo">Horizontal de alumínio</h2>
+          <p>Prática e durável, se ajusta a vãos pequenos e grandes e se adequa ao seu projeto de decoração, com cores e texturas atualizadas.</p>
+          <ul class="checklist">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Lâminas de 16, 25 ou 50 mm</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Acionamento manual ou motorizado</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Cores e texturas atualizadas</span></li>
+          </ul>
+          <div class="actions model-actions">
+            <a class="btn btn-primary" href="https://wa.me/5511999125703" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Orçamento de persiana de alumínio</a>
+            <button type="button" class="btn btn-outline" data-gallery="img_persianas/horAluminio" data-title="Horizontal de alumínio">Ver fotos<span data-count-for="img_persianas/horAluminio"></span></button>
+          </div>
         </div>
-    </section>
-    <section class="sect-content gallery-right">
-        <article class="art-cortinas">
-            <h2>Persiana Rolô Dupla</h2>
-            <div class="underline-titles"></div>
-            <p>
-                Combinam sofisticação da cortina de tecido com a funcionalidade da Persiana, suas laminas parecem flutuar entre as 2 telas que ficam sobrepostas no mesmo mecanismo. 
-                A sua principal característica é o controle de luminosidade e visibilidade sobre suas faixa horizontais. 
-                Com certeza nos dias de hoje esse modelo é o que tem de mais moderno e aconchegante!
-            </p>
-        </article>
-        <div class="art-gallery">
-            <div id="roloDupla" class="gallerys">
-                <!-- Insert from JS -->
-            </div>
+      </article>
+      <article class="model" id="roloDupla" aria-labelledby="roloDupla-titulo">
+        <button type="button" class="model-photo" data-gallery="img_persianas/roloDupla" data-title="Rolô dupla">
+          <img src="../img/img_persianas/roloDupla/roloDupla4CAR-sm.webp" srcset="../img/img_persianas/roloDupla/roloDupla4CAR-sm.webp 640w, ../img/img_persianas/roloDupla/roloDupla4CAR.webp 650w" sizes="(max-width: 720px) 100vw, 560px" width="650" height="488" loading="lazy" alt="Persiana rolô dupla em sala de reunião">
+          <span class="visually-hidden">Ver todas as fotos: Rolô dupla</span>
+        </button>
+        <div class="model-body">
+          <span class="eyebrow">Modelo 3 de 4</span>
+          <h2 id="roloDupla-titulo">Rolô dupla</h2>
+          <p>Une a sofisticação da cortina de tecido à funcionalidade da persiana: as faixas parecem flutuar entre duas telas sobrepostas no mesmo mecanismo. Hoje, um dos modelos mais modernos e aconchegantes.</p>
+          <ul class="checklist">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Controle de luminosidade</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Controle de visibilidade</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Duas telas no mesmo mecanismo</span></li>
+          </ul>
+          <div class="actions model-actions">
+            <a class="btn btn-primary" href="https://wa.me/5511999125703" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Orçamento de rolô dupla</a>
+            <button type="button" class="btn btn-outline" data-gallery="img_persianas/roloDupla" data-title="Rolô dupla">Ver fotos<span data-count-for="img_persianas/roloDupla"></span></button>
+          </div>
         </div>
-    </section>
-    <button id="btnTop" class="btn-top" onclick="voltarTopo()"><i class="fas fa-chevron-up"></i></button>
-    <footer>
-        <!-- Insert from JS -->
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous"></script>
+      </article>
+      <article class="model" id="vertical" aria-labelledby="vertical-titulo">
+        <button type="button" class="model-photo" data-gallery="img_persianas/vertical" data-title="Vertical">
+          <img src="../img/img_persianas/vertical/vertical10-sm.webp" srcset="../img/img_persianas/vertical/vertical10-sm.webp 640w, ../img/img_persianas/vertical/vertical10.webp 1280w" sizes="(max-width: 720px) 100vw, 560px" width="1280" height="720" loading="lazy" alt="Persiana vertical clara em sala de estar">
+          <span class="visually-hidden">Ver todas as fotos: Vertical</span>
+        </button>
+        <div class="model-body">
+          <span class="eyebrow">Modelo 4 de 4</span>
+          <h2 id="vertical-titulo">Vertical</h2>
+          <p>Grande variedade de cores e texturas, com ou sem galeria. Indicada para diversos ambientes, com controle eficaz da luminosidade e melhor fechamento entre as lâminas.</p>
+          <ul class="checklist">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Com ou sem galeria</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Melhor fechamento entre lâminas</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7"/></svg><span>Durável e fácil de higienizar</span></li>
+          </ul>
+          <div class="actions model-actions">
+            <a class="btn btn-primary" href="https://wa.me/5511999125703" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Orçamento de persiana vertical</a>
+            <button type="button" class="btn btn-outline" data-gallery="img_persianas/vertical" data-title="Vertical">Ver fotos<span data-count-for="img_persianas/vertical"></span></button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../javascript/script.js"></script>
 </body>
-
 </html>
