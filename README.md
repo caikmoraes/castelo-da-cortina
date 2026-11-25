@@ -41,3 +41,20 @@ Depois acesse http://localhost:8000.
    ```
 
 Para criar uma categoria nova, crie a pasta de imagens, rode os dois scripts e adicione o `<article>` do modelo e o botão correspondente na página.
+
+## Publicação (deploy)
+
+O site é publicado copiando os arquivos por SSH para a pasta `www/` do servidor, que é a raiz do site. O domínio passa pelo Cloudflare. Usuário e servidor ficam no painel da hospedagem; não os coloque no repositório.
+
+1. Atualize a `master` local:
+   ```sh
+   git switch master && git pull
+   ```
+2. A partir da raiz do repositório, copie só os arquivos do site (sem `.git`, `scripts/`, `README.md` e `CLAUDE.md`):
+   ```sh
+   scp -r index.html robots.txt sitemap.xml css fonts img javascript jsons pages \
+     <usuário>@<servidor>:www/
+   ```
+   Os arquivos precisam ficar direto em `www/`, nunca numa subpasta dela; senão o site sai do ar (erro 403). O `scp` sobrescreve, mas não apaga: arquivos removidos do repositório precisam ser apagados à mão no servidor.
+3. No Cloudflare, limpe o cache (Caching → Purge Everything).
+4. Confira a página inicial e o `/sitemap.xml` no navegador.
